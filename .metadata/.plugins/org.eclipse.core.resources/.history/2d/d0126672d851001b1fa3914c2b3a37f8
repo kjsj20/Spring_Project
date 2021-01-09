@@ -1,0 +1,8 @@
+package com.jscompany.springproject.model.member.repository;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class MybatisMemberDAO {
+	
+}

@@ -1,0 +1,8 @@
+package com.jscompany.springproject.model.member.repository;
+
+import java.util.List;
+
+public interface MemberDAO {
+	public List selectAll();
+	public void insert();
+}
