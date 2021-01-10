@@ -1,4 +1,5 @@
 <%@ page  contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,27 +9,7 @@
     <%@ include file="./lecture/inc/header.jsp"%>
 </head>
 <body>
- <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-   <div class="container">
-    <a class="navbar-brand" href="#">잡아오라</a>
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="oi oi-menu"></span> Menu
-   </button>
-
-   <div class="collapse navbar-collapse" id="ftco-nav">
-       <ul class="navbar-nav ml-auto">
-         <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-         <li class="nav-item"><a href="about.html" class="nav-link">LoadMap</a></li>
-         <li class="nav-item"><a href="course.html" class="nav-link">Course</a></li>
-         <li class="nav-item"><a href="instructor.html" class="nav-link">Community</a></li>
-         <li class="nav-item"><a href="blog.html" class="nav-link">FAQ</a></li>
-         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-     </ul>
- </div>
-</div>
-</nav>
-<!-- END nav -->
-
+<%@ include file="./lecture/inc/nav.jsp" %>
 <div class="hero-wrap js-fullheight" style="background-image: url('/resources/images/bg_1.png');">
   <div class="overlay"></div>
   <div class="container">
@@ -43,13 +24,13 @@
 </div>
 </div>
 
-<section id = "registForm" class="ftco-section ftco-no-pb ftco-no-pt">
+<section id = "registForm" class="ftco-section ftco-no-pb ftco-no-pt" <%if(session.getAttribute("member") != null){%>style = "display:none;"<%}%>>
     <div class="container">
        <div class="row">
           <div class="col-md-7"></div>
           <div class="col-md-5 order-md-last">
            <div id = "registArea" class="login-wrap p-4 p-md-5">
-               <h3 class="mb-4">Register Now</h3>
+               <h3 class="mb-4">회원가입</h3>
                <form class="signup-form">
                   <div class="form-group">
                      <label class="label" for="e_mail">이메일</label>
@@ -81,39 +62,39 @@
                   <button type="button" id="signUpUser" class="btn btn-primary submit">회원가입 <span class="fa fa-paper-plane"></span></button>
               </div>
           </form>
-          <p class="text-center">이미 가입한 계정이 있습니까? <a id = "signIn" href="#">Sign In</a></p>
+          <p class="text-center">이미 가입한 계정이 있습니까? <a href="/loginForm">Login</a></p>
       </div>
   </div>
  </div>
  </div>
  </section>
 
- <section id = "signInForm" class="ftco-section ftco-no-pb ftco-no-pt">
-    <div class="container">
-       <div class="row">
-          <div class="col-md-7"></div>
-          <div class="col-md-5 order-md-last">
-           <div class="login-wrap p-4 p-md-5">
-               <h3 class="mb-4">Sign In</h3>
-               <form class="signin-form">
-                  <div class="form-group">
-                     <label class="label" for="name">E-mail</label>
-                     <input type="text" class="form-control" placeholder="example@gmail.com">
-                 </div>
-                 <div class="form-group">
-                  <label class="label" for="password">Password</label>
-                  <input id="password-field" type="password" class="form-control" placeholder="Password">
-              </div>
-              <div class="form-group d-flex justify-content-end mt-4">
-                  <button type="submit" class="btn btn-primary submit"><span class="fa fa-paper-plane"></span></button>
-              </div>
-          </form>
-          <p class="text-center">가입한 계정이 없습니까? <a id = "signUp" href="#">Sign Up</a></p>
-      </div>
-  </div>
- </div>
- </div>
- </section>
+<!--  <section id = "signInForm" class="ftco-section ftco-no-pb ftco-no-pt"> -->
+<!--     <div class="container"> -->
+<!--        <div class="row"> -->
+<!--           <div class="col-md-7"></div> -->
+<!--           <div class="col-md-5 order-md-last"> -->
+<!--            <div class="login-wrap p-4 p-md-5"> -->
+<!--                <h3 class="mb-4">로그인</h3> -->
+<!--                <form class="signin-form"> -->
+<!--                   <div class="form-group"> -->
+<!--                      <label class="label" for="name">이메일</label> -->
+<!--                      <input type="text" class="form-control" placeholder="이메일 입력"> -->
+<!--                  </div> -->
+<!--                  <div class="form-group"> -->
+<!--                   <label class="label" for="password">비밀번호</label> -->
+<!--                   <input id="password-field" type="password" class="form-control" placeholder="비밀번호"> -->
+<!--               </div> -->
+<!--               <div class="form-group d-flex justify-content-end mt-4"> -->
+<!--                   <button type="submit" class="btn btn-primary submit"><span class="fa fa-paper-plane"></span></button> -->
+<!--               </div> -->
+<!--           </form> -->
+<!--           <p class="text-center">가입한 계정이 없으십니까? <a id = "signUp" href="#">Sign Up</a></p> -->
+<!--       </div> -->
+<!--   </div> -->
+<!--  </div> -->
+<!--  </div> -->
+<!--  </section> -->
 
 <section class="ftco-section">
    <div class="container">

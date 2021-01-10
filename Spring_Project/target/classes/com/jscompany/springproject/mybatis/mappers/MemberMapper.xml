@@ -5,6 +5,10 @@
 		select * from member 
 	</select>
 	
+	<select id="select" resultType = "Member">
+		select * from member where e_mail = #{e_mail} and password = #{password}
+	</select>
+	
 	<select id="idCheck" resultType="int">
 		select count(*) from member where e_mail = #{e_mail}
 	</select>

@@ -7,6 +7,7 @@ import com.jscompany.springproject.model.domain.Member;
 
 public interface MemberDAO {
 	public List selectAll();
+	public Member select(Member member) throws Exception;
 	public void insert(Member member);
 	public void updateAuthKey(Map map);
 	public void updateAuthStatus(Map map);

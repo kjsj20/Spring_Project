@@ -53,6 +53,7 @@ function signUp() {
 		},
 		error: function(){
 			alert('회원가입 에러 발생');
+			$('#signUpComplete').html("<font color='#FF6600'>가입중 에러가 발생하였습니다. <br> 고객센터에 문의해 주세요. </font>");
 			$('#signUpUser').attr('disabled', false);
 		}
 	});

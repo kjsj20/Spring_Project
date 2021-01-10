@@ -18,7 +18,12 @@ public class MybatisMemberDAO implements MemberDAO{
 	public List selectAll() {		 
 		return sqlSessionTemplate.selectList("Member.selectAll");
 	}
-
+	
+	public Member select(Member member)  throws Exception{
+		Member obj= sqlSessionTemplate.selectOne("Member.select", member);
+		return obj;
+	}
+	
 	public void insert(Member member) { 
 		sqlSessionTemplate.insert("Member.insert", member);
 	}
@@ -34,5 +39,5 @@ public class MybatisMemberDAO implements MemberDAO{
 	public int idCheck(Member member) throws Exception {
 		return sqlSessionTemplate.selectOne("Member.idCheck", member);
 	}
-	
+
 }

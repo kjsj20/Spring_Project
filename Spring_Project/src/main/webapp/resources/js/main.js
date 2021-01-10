@@ -11,17 +11,6 @@
     scrollProperty: 'scroll'
   });
 
-  //signUp make to display  none 
-  $("#signIn").click(function(){
-	$("#registForm").css('display','none');
-	$("#signInForm").css('display','block');
-  });
-  //signIn make to display  none 
-  $("#signUp").click(function(){
-	$("#registForm").css('display','block');
-	$("#signInForm").css('display','none');
-  });
-
 	var fullHeight = function() {
 
 		$('.js-fullheight').css('height', $(window).height());

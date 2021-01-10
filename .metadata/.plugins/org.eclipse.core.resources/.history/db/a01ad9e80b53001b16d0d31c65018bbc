@@ -1,0 +1,14 @@
+$(function(){
+	$('.login').click(function(){
+		login();
+	});
+});
+
+function login(){
+	$('#loginForm').attr({
+		action : "/login",
+		method : "POST"
+	});
+	
+	$('#loginForm').submit();
+}

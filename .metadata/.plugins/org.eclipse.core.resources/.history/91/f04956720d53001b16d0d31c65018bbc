@@ -1,0 +1,34 @@
+$(function(){
+	$('.login').click(function(){
+		if($('#e_mail').val()== ''){
+			alert('이메일을 입력해주세요..');
+		} else {
+			if($('#password').val()== ''){
+				alert('비밀번호를 입력해주세요..');	
+			} else{
+				login();
+			}
+		}
+	});
+});
+
+function login(){
+	$.ajax({
+		url : "/login",
+		type: "POST",
+		data: $("#loginForm").serialize(),
+		success: function(data){
+			console.log(data);
+		},
+		error: function(){
+			alert('로그인중 에러 발생');
+		}
+	});
+	
+	$('#loginForm').attr({
+		action : "/login",
+		method : "POST"
+	});
+	
+	$('#loginForm').submit();
+}

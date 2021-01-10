@@ -1,0 +1,22 @@
+$(function(){
+	$('.login').click(function(){
+		if($('#e_mail').val()== ''){
+			alert('이메일을 입력해주세요..');
+		} else {
+			if($('#password').val()== ''){
+				alert('비밀번호를 입력해주세요..')'	
+			} else{
+				login();
+			}
+		}
+	});
+});
+
+function login(){
+	$('#loginForm').attr({
+		action : "/login",
+		method : "POST"
+	});
+	
+	$('#loginForm').submit();
+}

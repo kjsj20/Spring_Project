@@ -1,0 +1,7 @@
+$(function(){
+	
+	$('.login').click(function(){
+		alert('나 눌럿어 ?');
+	});
+	
+});

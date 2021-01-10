@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="회원가입"/>
+		<item key="selection" value="login"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="login"/>
+			<item value="submit"/>
+			<item value="link"/>
+			<item value="registForm"/>
+			<item value="signInForm"/>
+			<item value="displayregistForm"/>
+			<item value="display"/>
+			<item value="&quot;registForm&quot;"/>
+			<item value="registform"/>
 			<item value="회원가입"/>
 			<item value="regist"/>
 			<item value="img src"/>
 			<item value="img"/>
 			<item value="test"/>
 			<item value="javax.mail"/>
-			<item value="exclusion"/>
-			<item value="navbar-brand"/>
-			<item value="work-1"/>
-			<item value="font"/>
-			<item value="js"/>
-			<item value="scss"/>
-			<item value="images/"/>
-			<item value="image"/>
-			<item value="js/"/>
 		</list>
 		<list key="replacehistory">
 			<item value="/resources/images/"/>
