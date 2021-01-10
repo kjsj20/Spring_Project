@@ -13,10 +13,27 @@ $(function(){
 });
 
 function login(){
+	var $e_mail = $("#hiddenForm input[name='e_mail']");
+	var $password = $("#hiddenForm input[name='password']");
+	
+	 // Server로부터 받은 공개키 입력
+    var rsa = new RSAKey();
+    rsa.setPublic($("#RSAModulus").val(), $("#RSAExponent").val());	
+    
+	var e_mail = $("#loginForm").find("#e_mail").val();
+    var password = $("#loginForm").find("#password").val();
+	
+	console.log(e_mail);
+	console.log(password);
+	
+	$e_mail.val(rsa.encrypt(e_mail)); // 아이디 암호화
+    $password.val(rsa.encrypt(password)); // 비밀번호 암호화
+
+		
 	$.ajax({
 		url : "/login",
 		type: "POST",
-		data: $("#loginForm").serialize(),
+		data: $("#hiddenForm").serialize(),
 		success: function(data){
 			if(data == ''){
 				$('#idPassChk').text('');

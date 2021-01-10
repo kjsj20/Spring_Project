@@ -1,5 +1,6 @@
 package com.jscompany.springproject.controller.member;
 
+import java.security.PrivateKey;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,13 +11,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.jscompany.springproject.common.RSAUtil;
 import com.jscompany.springproject.model.domain.Member;
+import com.jscompany.springproject.model.domain.RSA;
 import com.jscompany.springproject.model.member.service.MailSendService;
 import com.jscompany.springproject.model.member.service.MemberService;
 
@@ -29,6 +34,9 @@ public class MemberController {
 	
 	@Autowired
 	private MailSendService mss;
+	
+	@Autowired
+	private RSAUtil rsaUtil;
 	
 	@PostMapping("/member/signup")
 	@ResponseBody
@@ -59,20 +67,49 @@ public class MemberController {
 	    return "redirect:/";
 	}
 	@GetMapping("/loginForm")
-	public ModelAndView getLoginForm(ModelAndView mav) {
-		mav.setViewName("member/loginForm");
+	public ModelAndView getLoginForm(HttpSession session, ModelAndView mav) {
+		//세션에 로그인 값이 있으면 들어 갈 수 없도록 해야함.. 그래서 인덱스로 리다이렉팅
+		if(session.getAttribute("member")!=null) {
+			mav.setViewName("redirect:/");
+		} else {
+			// RSA 키 생성
+		    PrivateKey key = (PrivateKey) session.getAttribute("RSAprivateKey");
+		    if (key != null) { // 기존 key 파기
+		        session.removeAttribute("RSAprivateKey");
+		    }
+	    	RSA rsa = rsaUtil.createRSA();
+	    	mav.addObject("modulus", rsa.getModulus());
+	    	mav.addObject("exponent", rsa.getExponent());
+	    	session.setAttribute("RSAprivateKey", rsa.getPrivateKey());
+	    	mav.setViewName("member/loginForm");
+		}
 		return mav;
 	}
 	
 	@PostMapping("/login")
 	@ResponseBody
-	public Member login(Member member, HttpServletRequest request) throws Exception{
+	public Member login(Member member, HttpSession session, RedirectAttributes ra) throws Exception{
+		//개인키 취득
+		PrivateKey key = (PrivateKey) session.getAttribute("RSAprivateKey");
+		if(key==null) {
+			System.out.println("resultMsg 비정상 적인 접근 입니다.");
+			return null;
+		}
+		
+		//아이디/비밀번호 복호화
+		String e_mail = rsaUtil.getDecryptText(key, member.getE_mail());
+		String password = rsaUtil.getDecryptText(key, member.getPassword());
+		
+		//복호화된 평문을 재설정
+		member.setE_mail(e_mail);
+		member.setPassword(password);
+		
 		Member obj = memberService.select(member);
-		System.out.println(obj);
+		
 		if(obj != null) {
-			HttpSession session = request.getSession();
-			System.out.println(session);
-			session.setAttribute("member", obj);			
+			session.setAttribute("member", obj);
+			//session 에 저장된 개인키 초기화
+			session.removeAttribute("RSAprivateKey");
 		}
 		return obj;
 	}

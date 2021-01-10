@@ -9,13 +9,20 @@
 <link rel="stylesheet" href="/resources/css/loginForm.css">
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="/resources/js/login.js"></script>
+<!-- javascript lib load -->
+	<script src="/resources/js/rsa/rsa.js"></script>
+	<script src="/resources/js/rsa/jsbn.js"></script>
+	<script src="/resources/js/rsa/prng4.js"></script>
+	<script src="/resources/js/rsa/rng.js"></script>
+	<script src="/resources/js/login.js"></script>
 </head>
 <body>
 	<div class="bg-img">
 		<div class="content">
 			<header>로그인</header>
 			<form id="loginForm">
+				<input type="hidden" id="RSAModulus" value="${modulus}" /><!-- 서버에서 전달한값을 셋팅한다. -->
+				<input type="hidden" id="RSAExponent" value="${exponent}" /><!-- 서버에서 전달한값을 셋팅한다. -->
 				<div class="field">
 					<span class="fa fa-user"></span> <input type="text" id="e_mail" name = "e_mail" required
 						placeholder="이메일 입력">
@@ -47,6 +54,13 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- 실제 서버로 전송되는 form -->
+	<form id="hiddenForm">
+	        <input type="hidden" name="e_mail" />
+	        <input type="hidden" name="password" />
+	</form>
+
 	<script>
       const pass_field = document.querySelector('.pass-key');
       const showBtn = document.querySelector('.show');
