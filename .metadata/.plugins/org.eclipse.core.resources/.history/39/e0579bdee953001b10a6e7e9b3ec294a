@@ -1,0 +1,22 @@
+$(function(){
+	$('.delMember').click(function(){
+		if(confirm("정말 삭제 하시겠습니까?")){
+			delMember(this.id, $("#currentPage").val());
+		};
+	});
+});
+
+function delMember(id, currentPage){
+	console.log(id);
+	console.log(currentPage);
+	$.ajax({
+		url:"/admin/delMember?member_id="+${id}+"currentPage="+${currentPage},
+		type:"POST",
+		success:function(data){
+			alert('삭제성공');
+		},
+		error:function(){
+			alert('삭제중 오류 발생');
+		}
+	});
+}

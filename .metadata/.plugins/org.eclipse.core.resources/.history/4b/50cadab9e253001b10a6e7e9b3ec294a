@@ -1,0 +1,37 @@
+package com.jscompany.springproject.controller.admin;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.jscompany.springproject.common.Pager;
+import com.jscompany.springproject.model.member.service.MemberService;
+
+@Controller
+public class AdminController {
+	
+	@Autowired
+	MemberService memberService;
+	@Autowired
+	Pager pager;
+	
+	@GetMapping("/admin/list")
+	public ModelAndView getMemberList(ModelAndView mav) throws Exception{
+		List memberList = memberService.selectAll();
+		mav.addObject("memberList", memberList);
+		mav.addObject("pager", pager);
+		mav.setViewName("admin/list");
+		return mav;
+	}
+	
+	@PostMapping("/admin/delMember")
+	public String delMember(int member_id) throws Exception{
+		memberService.delete(member_id);\
+		
+		return null;
+	}
+}

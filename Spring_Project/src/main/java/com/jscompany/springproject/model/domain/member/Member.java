@@ -11,6 +11,7 @@ public class Member {
 	private String password;
 	private String user_name;
 	private int teacher_state_id;
+	private int admin_state;
 	private String joindate;
 	private String authkey;
 	private int authstatus;

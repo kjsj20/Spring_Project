@@ -60,7 +60,7 @@ public class MemberController {
 	}
 	
 	@GetMapping("/member/signUpConfirm")
-	 public String signUpConfirm(@RequestParam Map<String, String> map){
+	 public String signUpConfirm(@RequestParam Map<String, String> map) throws Exception{
 	    //email, authKey 가 일치할경우 authStatus 업데이트
 	    memberService.updateAuthStatus(map);
 	    

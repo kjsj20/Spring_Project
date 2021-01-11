@@ -19,7 +19,7 @@ public class MemberServiceImpl implements MemberService{
 	@Autowired
 	SecureManager secureManager;  
 	
-	public List selectAll() {
+	public List selectAll() throws Exception{
 		return memberDAO.selectAll();
 	}
 	
@@ -30,7 +30,7 @@ public class MemberServiceImpl implements MemberService{
 		return obj;
 	}
 	
-	public void regist(Member member) {
+	public void regist(Member member) throws Exception{
 		//암호화 처리!
 		String secureData = secureManager.getSecureData(member.getPassword());
 		member.setPassword(secureData);
@@ -38,16 +38,21 @@ public class MemberServiceImpl implements MemberService{
 		memberDAO.insert(member);
 	}
 
-	public void updateAuthKey(Map map) {
+	public void updateAuthKey(Map map) throws Exception{
 		memberDAO.updateAuthKey(map);
 	}
 
-	public void updateAuthStatus(Map map) {
+	public void updateAuthStatus(Map map) throws Exception{
 		memberDAO.updateAuthStatus(map);
 	}
 
 	public int idCheck(Member member) throws Exception{
 		return memberDAO.idCheck(member);
+	}
+
+	@Override
+	public void delete(int member_id) throws Exception{
+		memberDAO.delete(member_id);
 	}
 
 }

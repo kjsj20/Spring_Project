@@ -15,7 +15,7 @@ public class MybatisMemberDAO implements MemberDAO{
 	@Autowired
 	private SqlSessionTemplate sqlSessionTemplate;
 
-	public List selectAll() {		 
+	public List selectAll() throws Exception {		 
 		return sqlSessionTemplate.selectList("Member.selectAll");
 	}
 	
@@ -24,20 +24,25 @@ public class MybatisMemberDAO implements MemberDAO{
 		return obj;
 	}
 	
-	public void insert(Member member) { 
+	public void insert(Member member) throws Exception { 
 		sqlSessionTemplate.insert("Member.insert", member);
 	}
 
-	public void updateAuthKey(Map map) {
+	public void updateAuthKey(Map map)throws Exception {
 		sqlSessionTemplate.update("Member.updateAuthKey", map);
 	}
 
-	public void updateAuthStatus(Map map) {
+	public void updateAuthStatus(Map map)throws Exception {
 		sqlSessionTemplate.update("Member.updateAuthStatus", map);
 	}
 
 	public int idCheck(Member member) throws Exception {
 		return sqlSessionTemplate.selectOne("Member.idCheck", member);
+	}
+
+	@Override
+	public void delete(int member_id) throws Exception {
+		sqlSessionTemplate.delete("Member.delete", member_id);
 	}
 
 }

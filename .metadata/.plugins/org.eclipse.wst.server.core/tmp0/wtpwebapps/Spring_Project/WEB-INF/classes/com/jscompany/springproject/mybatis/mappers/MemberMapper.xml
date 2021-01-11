@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Member">
 	<select id="selectAll" resultType="Member">
-		select * from member 
+		select * from member order by member_id asc
 	</select>
 	
 	<select id="select" resultType = "Member">
@@ -25,4 +25,8 @@
 	<update id="updateAuthStatus" parameterType="hashMap">
 		update member set authStatus = 1 where e_mail = #{e_mail} and authKey = #{authKey} 
 	</update>
+	
+	<delete id="delete" parameterType="int">
+		delete from member where member_id = #{member_id}
+	</delete>
 </mapper>

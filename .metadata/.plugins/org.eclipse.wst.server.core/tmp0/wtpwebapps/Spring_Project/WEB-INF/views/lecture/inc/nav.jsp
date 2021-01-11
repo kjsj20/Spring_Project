@@ -1,4 +1,8 @@
+<%@page import="com.jscompany.springproject.model.domain.member.Member"%>
 <%@ page  contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	Member member = (Member)session.getAttribute("member");
+%>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
    <div class="container">
     <a class="navbar-brand" href="#">잡아오라</a>
@@ -8,10 +12,10 @@
 
    <div class="collapse navbar-collapse" id="ftco-nav">
        <ul class="navbar-nav ml-auto">
-         <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+         <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
          <li class="nav-item"><a href="about.html" class="nav-link">LoadMap</a></li>
          <li class="nav-item"><a href="course.html" class="nav-link">Course</a></li>
-         <li class="nav-item"><a href="instructor.html" class="nav-link">Community</a></li>
+         <li class="nav-item"><a href="/board/notice" class="nav-link">Community</a></li>
          <li class="nav-item"><a href="blog.html" class="nav-link">FAQ</a></li>
          <li class="nav-item">
          	<%if(session.getAttribute("member")==null){//세션에 담겨진 데이터가 없다면 %>
@@ -20,6 +24,14 @@
 	         <a href="/loginout" class="nav-link">Logout</a>
 	        <%} %>
          </li>
+         <%if(session.getAttribute("member")!=null){%>
+        	 <%if(member.getAdmin_state() == 1) {%>
+         		<li class="nav-item"><a href="/admin/list" class="nav-link">AdminPage</a></li>
+         	<%} %>
+         	 <%if(member.getTeacher_state_id() == 1) {%>
+         		<li class="nav-item"><a href="/lecture/main" class="nav-link">TeacherPage</a></li>
+         	<%} %>
+         <%} %>
      </ul>
  </div>
 </div>
