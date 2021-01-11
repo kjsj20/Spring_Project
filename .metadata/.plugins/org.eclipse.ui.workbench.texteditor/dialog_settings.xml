@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="/resources/css/board/"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="fa-home"/>
 			<item value="/resources/css/"/>
 			<item value="/resources/"/>
 			<item value=".ftco-navbar-light .navbar-nav &gt; .nav-item &gt; .nav-link"/>
@@ -22,7 +23,6 @@
 			<item value="message"/>
 			<item value="pkcs1pad2"/>
 			<item value="login"/>
-			<item value="submit"/>
 		</list>
 		<list key="replacehistory">
 			<item value="/resources/css/board/"/>

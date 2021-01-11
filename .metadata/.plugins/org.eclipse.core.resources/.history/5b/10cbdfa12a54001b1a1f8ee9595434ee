@@ -1,0 +1,12 @@
+$(function(){
+	$('.radio').click(function(){
+		getSubCategory(this.id);
+	});
+});
+
+function getSubCategory(id){
+	$.ajax({
+		url: "/lecture/getSubCategory?subCategory_id=" + id,
+		
+	});
+}

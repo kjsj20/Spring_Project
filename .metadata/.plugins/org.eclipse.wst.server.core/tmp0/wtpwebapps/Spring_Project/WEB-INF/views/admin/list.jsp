@@ -6,6 +6,7 @@
 	List<Member> memberList = (List)request.getAttribute("memberList");
 	Pager pager = (Pager)request.getAttribute("pager");
 	pager.init(request, memberList);
+	Member memberSession = (Member)session.getAttribute("member");
 %>
 <!DOCTYPE html>
 <html>
@@ -19,7 +20,12 @@
 
 </head>
 <body>
-
+	<%if(memberSession.getAdmin_state() !=1){%>
+		<script>
+			alert('접근 할 수 없습니다.');
+			history.back();
+		</script>
+	<%} %>
 	<%@ include file="./inc/sidebar.jsp"%>
 
 	<table>

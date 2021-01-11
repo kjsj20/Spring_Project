@@ -1,0 +1,12 @@
+package com.jscompany.springproject.controller.lecture;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class LectureController {
+	@GetMapping("/lecture/regist")
+	public String getRegistForm() {
+		
+	}
+}

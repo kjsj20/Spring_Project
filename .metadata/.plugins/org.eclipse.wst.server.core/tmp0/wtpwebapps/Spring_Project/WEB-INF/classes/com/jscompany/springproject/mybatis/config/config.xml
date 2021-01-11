@@ -7,11 +7,13 @@
 		<setting name="jdbcTypeForNull" value="VARCHAR" />
 	</settings>
 	<typeAliases>
-		<typeAlias
-			type="com.jscompany.springproject.model.domain.member.Member" alias="Member" />
+		<typeAlias type="com.jscompany.springproject.model.domain.member.Member" alias="Member" />
+		<typeAlias type="com.jscompany.springproject.model.domain.lecture.Lecture_TopCategory" alias="Lecture_TopCategory" />
+		<typeAlias type="com.jscompany.springproject.model.domain.lecture.Lecture_SubCategory" alias="Lecture_SubCategory" />
 	</typeAliases>
 	<mappers>
-		<mapper
-			resource="com/jscompany/springproject/mybatis/mappers/MemberMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mappers/MemberMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mappers/Lecture_TopCategoryMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mappers/Lecture_SubCategoryMapper.xml" />
 	</mappers>
 </configuration>

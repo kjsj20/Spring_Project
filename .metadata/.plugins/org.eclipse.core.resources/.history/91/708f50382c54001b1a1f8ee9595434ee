@@ -1,0 +1,17 @@
+$(function(){
+	$('.radio').click(function(){
+		getSubCategory(this.id);
+	});
+});
+
+function getSubCategory(id){
+	$.ajax({
+		url: "/lecture/getSubCategory?subCategory_id=" + id,
+		success : function(data){
+			alert('성공?');
+		},
+		error : function(){
+			alert("실패?");
+		}
+	});
+}

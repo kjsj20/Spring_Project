@@ -1,0 +1,14 @@
+package com.jscompany.springproject.model.lecture.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class Lecture_SubCategoryServiceImpl implements Lecture_SubCategoryService{
+
+	public List selectByTopId(int lecture_topcategory_id) throws Exception {
+		return null;
+	}
+
+}

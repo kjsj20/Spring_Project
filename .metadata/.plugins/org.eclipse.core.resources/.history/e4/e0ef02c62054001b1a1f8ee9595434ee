@@ -1,0 +1,5 @@
+package com.jscompany.springproject.model.lecture.service;
+
+public interface Lecture_TopCategoryService {
+	public List selectAll() throws Exception;
+}

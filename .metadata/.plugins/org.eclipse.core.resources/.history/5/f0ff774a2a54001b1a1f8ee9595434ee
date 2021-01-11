@@ -1,0 +1,9 @@
+$(function(){
+	$('.radio').click(function(){
+		getSubCategory();
+	});
+});
+
+function getSubCategory(){
+	
+}

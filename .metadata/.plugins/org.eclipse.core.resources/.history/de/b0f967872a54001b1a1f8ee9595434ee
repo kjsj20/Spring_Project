@@ -1,0 +1,9 @@
+$(function(){
+	$('.radio').click(function(){
+		getSubCategory(this.id);
+	});
+});
+
+function getSubCategory(id){
+	alert(id+"번눌렀어?");
+}
