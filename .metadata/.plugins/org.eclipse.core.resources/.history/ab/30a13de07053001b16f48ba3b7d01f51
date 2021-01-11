@@ -1,0 +1,173 @@
+<%@ page  contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/resources/css/board/semantic.min.css" rel="stylesheet" />
+    <link href="/resources/css/board/styles.css?v=8gHZYADYy5GYxYubxp9W9hF4MuHi6rJkTx66Yh6LgaA" rel="stylesheet" />
+    <link href="/resources/css/board/jquery-ui.css" rel="stylesheet">
+    <link href="/resources/css/board/jquery.bxslider.css" rel="stylesheet" />
+    <link href="/resources/css/board/flexslider.css" rel="stylesheet" />
+    <link href="/resources/css/board/coding-editor.css?v=PcJtV1wrr17HVXyCKnGcq8HaRlDqjrY-A38PRY6ClWY" rel="stylesheet" />
+    <link href="/resources/css/board/common.css?v=yXd0S6u6SBGCn8osoY9ic1_wI_rAn4F1URWWZNbLafA" rel="stylesheet" />
+    <link href="/resources/css/board/sub.css?v=HwHJcxMbM4H2DoH9sGsoRVXYsN_KPySvn4UexNJGjJ4" rel="stylesheet" />
+<%@ include file="../lecture/inc/header.jsp"%>
+</head>
+<body>
+<%@ include file="../lecture/inc/nav.jsp" %>
+
+</div>
+<!-- content -->
+<div id="contain">
+    <div class="contain_in">
+        <div class="room_cover">
+            <div class="left_common">
+    <div class="top_info for_question">
+        <div id="question"><p class="tit">커뮤니티</p></div>
+    </div>
+    <div class="mid_info">
+        <div class="drop_down">
+            <ul>
+                <li>
+                    <a href="/Board/Notification/Public" class="drop_btn">공지사항</a>
+                </li>
+                <li>
+                    <a href="/Board/Community/Free/Info" class="drop_btn">소식 및 정보</a>
+                </li>
+                <li>
+                    <a href="/Board/Community/Free/Free" class="drop_btn">자유</a>
+                </li>
+                <li>
+                    <a href="/Board/Community/Free/Qna" class="drop_btn">질문 및 답변</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+            <div class="right_area">
+                <div class="board_wrap clear">
+                    <div class="Board">
+                        <div class="title clear" style="float:left;">
+                            <h2 style="font-size:23px;">&#xACF5;&#xC9C0;&#xC0AC;&#xD56D;</h2>
+                        </div>
+                        <div class="ui selection dropdown opt" style="float:right; margin-top:20px;">
+                            <input type="hidden" name="gender">
+                            <i class="dropdown icon"></i>
+                            <div class="text">최신순</div>
+                            <div class="menu" id="orderSort">
+                                <div class="item active selected" data-value="0">최신순</div>
+                                <div class="item" data-value="1">추천순</div>
+                                <div class="item" data-value="2">댓글순</div>
+                                <div class="item" data-value="3">조회순</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="boardTbl">
+                    <table class="ui padded table tbl001">
+                        <colgroup>
+                            <col width="7%" />
+                            <col width="44%" />
+                            <col width="23%" />
+                            <col width="6%" />
+                            <col width="8%" />
+                            <col width="26%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>제목</th>
+                                <th>작성자</th>
+                                <th>추천</th>
+                                <th>조회수</th>
+                                <th>작성일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>
+                                            <a href="/Board/notification/public/service/41">[&#xACF5;&#xD1B5;] 2018 &#xC774;&#xB370;&#xC77C;&#xB9AC; &#xCF54;&#xB529; &#xCC4C;&#xB9B0;&#xC9C0; &#xC131;&#xB8CC; </a>
+                                        </td>
+                                        <td style="text-align:center"><span class="person"><img src="https://modustorage.blob.core.windows.net/image/de921afc-9b44-4e7f-9bc1-ffac04adced5___admin_profile.png" alt="profileImg"><a href="javascript:;" class="nick">&#xBAA8;&#xB450;&#xC758; &#xCF54;&#xB529;</a></span></td>
+                                        <td>2</td>
+                                        <td>309</td>
+                                        <td>2018.11.05</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>
+                                            <a href="/Board/notification/public/service/31">&#xBAA8;&#xB450;&#xC758; &#xCF54;&#xB529; &#xC2DC;&#xD5D8; &#xBC0F; &#xACFC;&#xC81C;, &#xD3C9;&#xAC00; &#xAD00;&#xB9AC; &#xBCA0;&#xD0C0; &#xC11C;&#xBE44;&#xC2A4;  </a>
+                                        </td>
+                                        <td style="text-align:center"><span class="person"><img src="/images/photoDefualt.png" alt="profileImg"><a href="javascript:;" class="nick">&#xAD00;&#xB9AC;&#xC790;</a></span></td>
+                                        <td>0</td>
+                                        <td>281</td>
+                                        <td>2018.08.23</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>
+                                            <a href="/Board/notification/public/service/27">&#xC6D0;&#xD65C;&#xD55C; &#xBAA8;&#xB450;&#xC758; &#xCF54;&#xB529; &#xC774;&#xC6A9;&#xC744; &#xC704;&#xD55C; &#xC548;&#xB0B4;  </a>
+                                        </td>
+                                        <td style="text-align:center"><span class="person"><img src="/images/photoDefualt.png" alt="profileImg"><a href="javascript:;" class="nick">&#xAD00;&#xB9AC;&#xC790;</a></span></td>
+                                        <td>0</td>
+                                        <td>153</td>
+                                        <td>2018.07.31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            <a href="/Board/notification/public/service/9">&#xBAA8;&#xB450;&#xC758; &#xCF54;&#xB529; &#x2018;GS &#xC778;&#xC99D; 1&#xB4F1;&#xAE09; &#xD68D;&#xB4DD;&#x2019; </a>
+                                        </td>
+                                        <td style="text-align:center"><span class="person"><img src="/images/photoDefualt.png" alt="profileImg"><a href="javascript:;" class="nick">&#xAD00;&#xB9AC;&#xC790;</a></span></td>
+                                        <td>0</td>
+                                        <td>142</td>
+                                        <td>2018.07.18</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <a href="/Board/notification/public/service/7">&#xBAA8;&#xB450;&#xC758; &#xCF54;&#xB529; Version1.0 &#xC624;&#xD508; </a>
+                                        </td>
+                                        <td style="text-align:center"><span class="person"><img src="/images/photoDefualt.png" alt="profileImg"><a href="javascript:;" class="nick">&#xAD00;&#xB9AC;&#xC790;</a></span></td>
+                                        <td>0</td>
+                                        <td>72</td>
+                                        <td>2018.07.18</td>
+                                    </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="write">
+                                            </div>
+                </div>
+
+                <div class="contentBottom">
+                    <div class="pagingNum clear">
+                        <div id="paging"></div>
+                    </div>
+
+                    <div class="ui selection dropdown opt upward" style="padding-right:1em; padding-left:1.2em;">
+                        <input type="hidden" name="gender">
+                        <i class="caret up icon" style="float:right"></i>
+                        <div class="text">
+제목                        </div>
+                        <div id="searchType" class="menu">
+                            <div class="item active selected" data-value="2">제목</div>
+                            <div class="item " data-value="3">내용</div>
+                        </div>
+                    </div>
+
+                    <div class="ui icon input searchTextBox">
+                        <input id="searchTxt" type="text" placeholder="Search..." value="">
+                        <i id="btnSearch" class="search icon link" onclick="fnBtnSearch_Click()"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //content -->
+<%@ include file="../lecture/inc/footer.jsp" %>
+</body>
+</html>

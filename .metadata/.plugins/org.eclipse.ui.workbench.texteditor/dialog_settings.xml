@@ -1,38 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="login"/>
+		<item key="selection" value="/resources/css/board/"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="/resources/css/"/>
+			<item value="/resources/"/>
+			<item value=".ftco-navbar-light .navbar-nav &gt; .nav-item &gt; .nav-link"/>
+			<item value="ftco-navbar-light"/>
+			<item value="ftco-navbar"/>
+			<item value="navbar-collapse"/>
+			<item value="Home"/>
+			<item value="n ="/>
+			<item value="RSAEncrypt"/>
+			<item value="Message too long for RSA"/>
+			<item value="private"/>
+			<item value="message"/>
+			<item value="pkcs1pad2"/>
 			<item value="login"/>
 			<item value="submit"/>
-			<item value="link"/>
-			<item value="registForm"/>
-			<item value="signInForm"/>
-			<item value="displayregistForm"/>
-			<item value="display"/>
-			<item value="&quot;registForm&quot;"/>
-			<item value="registform"/>
-			<item value="회원가입"/>
-			<item value="regist"/>
-			<item value="img src"/>
-			<item value="img"/>
-			<item value="test"/>
-			<item value="javax.mail"/>
 		</list>
 		<list key="replacehistory">
+			<item value="/resources/css/board/"/>
+			<item value="/resources/board"/>
 			<item value="/resources/images/"/>
 			<item value="/resource/js"/>
 			<item value="/resources/css/"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="677"/>
-		<item key="DIALOG_Y_ORIGIN" value="487"/>
+		<item key="DIALOG_X_ORIGIN" value="1286"/>
+		<item key="DIALOG_Y_ORIGIN" value="179"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

@@ -13,7 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import com.jscompany.springproject.model.domain.RSA;
+import com.jscompany.springproject.model.domain.member.RSA;
  
 /** Client -> Server 데이터 전송간 암호화 기능을 담당 **/
 @Component

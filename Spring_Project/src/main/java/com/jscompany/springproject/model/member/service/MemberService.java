@@ -3,7 +3,7 @@ package com.jscompany.springproject.model.member.service;
 import java.util.List;
 import java.util.Map;
 
-import com.jscompany.springproject.model.domain.Member;
+import com.jscompany.springproject.model.domain.member.Member;
 
 public interface MemberService {
 	public List selectAll();

@@ -8,7 +8,7 @@
 	</settings>
 	<typeAliases>
 		<typeAlias
-			type="com.jscompany.springproject.model.domain.Member" alias="Member" />
+			type="com.jscompany.springproject.model.domain.member.Member" alias="Member" />
 	</typeAliases>
 	<mappers>
 		<mapper

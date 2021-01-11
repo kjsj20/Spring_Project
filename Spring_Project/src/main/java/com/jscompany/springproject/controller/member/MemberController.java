@@ -20,8 +20,8 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.jscompany.springproject.common.RSAUtil;
-import com.jscompany.springproject.model.domain.Member;
-import com.jscompany.springproject.model.domain.RSA;
+import com.jscompany.springproject.model.domain.member.Member;
+import com.jscompany.springproject.model.domain.member.RSA;
 import com.jscompany.springproject.model.member.service.MailSendService;
 import com.jscompany.springproject.model.member.service.MemberService;
 

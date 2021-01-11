@@ -1,0 +1,5 @@
+package com.jscompany.springproject.controller.board;
+
+public class BoardController {
+
+}

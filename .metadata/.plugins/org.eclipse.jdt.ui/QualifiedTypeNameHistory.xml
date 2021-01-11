@@ -15,7 +15,6 @@
     <fullyQualifiedTypeName name="com.jscompany.springproject.model.domain.Member"/>
     <fullyQualifiedTypeName name="com.jscompany.springproject.model.member.service.MemberService"/>
     <fullyQualifiedTypeName name="com.jscompany.springproject.model.member.service.MailSendService"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
     <fullyQualifiedTypeName name="sun.jvm.hotspot.debugger.DataSource"/>
     <fullyQualifiedTypeName name="javax.sql.DataSource"/>
     <fullyQualifiedTypeName name="org.apache.tomcat.jdbc.pool.DataSource"/>
@@ -25,8 +24,13 @@
     <fullyQualifiedTypeName name="com.jscompany.springproject.exception.MemberRegistException"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.jscompany.springproject.common.SecureManager"/>
-    <fullyQualifiedTypeName name="com.jscompany.springproject.model.domain.RSA"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+    <fullyQualifiedTypeName name="com.jscompany.springproject.common.RSAUtil"/>
+    <fullyQualifiedTypeName name="com.jscompany.springproject.model.domain.RSA"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="java.security.PrivateKey"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.mvc.support.RedirectAttributes"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 </qualifiedTypeNameHistroy>

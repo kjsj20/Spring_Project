@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.jscompany.springproject.common.SecureManager;
-import com.jscompany.springproject.model.domain.Member;
+import com.jscompany.springproject.model.domain.member.Member;
 import com.jscompany.springproject.model.member.repository.MemberDAO;
 
 @Service
