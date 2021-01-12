@@ -1,5 +1,9 @@
 $(function(){
 	
+	$('.updateLecture').click(function(){
+		location.href = "/lecture/detail";
+	});
+	
 	$('.sidebar').find('a').click(function(){
 		$('.sidebar').find('a').removeClass("active");
 		$(this).addClass("active");

@@ -1,0 +1,27 @@
+package com.jscompany.springproject.aop;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.jscompany.springproject.model.lecture.service.LectureService;
+import com.jscompany.springproject.model.lecture.service.Lecture_TopCategoryService;
+
+public class LectureDataAspect {
+	@Autowired
+	private Lecture_TopCategoryService lecture_TopCategoryService;
+	private LectureService lectureService;
+	
+	public Object getGlobalData(ProceedingJoinPoint joinPoint) throws Throwable{
+		Object result = null;
+		HttpServletRequest request = null;
+		
+		//매개변수로부터 요청 객체 추출!!
+		for(Object arg : joinPoint.getArgs()) {
+			
+		}
+		
+		return null;
+	}
+}

@@ -62,9 +62,9 @@
 				<%if(lecture.getLecture_use_state() == 1){%> 승인완료 <%} else if(lecture.getLecture_use_state() == 2) {%> 승인반려 <%} else {%> 승인대기 <%} %>
 			</td>
 			<td>
-				<input id="" class="addSection" type="button" value="섹션추가"/>
-				<input id="" class="update" type="button" value="수정"/>
-				<input id="" class="delMember" type="button" value="삭제"/>
+				<input class="addSection" type="button" value="섹션추가" style="margin-left:2px;"/>
+				<input class="updateLecture" type="button" value="수정" style="margin-left:8px;"/>
+				<input class="delMember" type="button" value="삭제" style="margin-left:8px;"/>
 				<input id="currentPage" type="hidden" value="<%=pager.getCurrentPage()%>"/>
 			</td>
 		</tr>

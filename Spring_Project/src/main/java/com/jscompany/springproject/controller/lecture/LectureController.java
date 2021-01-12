@@ -25,9 +25,6 @@ import com.jscompany.springproject.model.lecture.service.Lecture_TopCategoryServ
 public class LectureController {
 	
 	@Autowired
-	private Lecture_TopCategoryService lecture_TopCategoryService; 
-	
-	@Autowired
 	private Lecture_SubCategoryService lecture_SubCategoryService; 
 	
 	@Autowired
@@ -48,11 +45,7 @@ public class LectureController {
 	
 	//registForm을 호출함과 동시에 탑 카테고리, 난이도 데이터를 가져와서 담음
 	@GetMapping("/lecture/registForm")
-	public ModelAndView getRegistForm(ModelAndView mav) throws Exception{
-		List topList = lecture_TopCategoryService.selectAll();
-		List diffList = lectureService.selectDiff();
-		mav.addObject("topList",topList);
-		mav.addObject("diffList", diffList);
+	public ModelAndView getRegistForm(ModelAndView mav, HttpServletRequest request) throws Exception{
 		mav.setViewName("lecture/regist");
 		return mav;
 	}
@@ -86,6 +79,13 @@ public class LectureController {
 		} else {
 			mav.setViewName("redirect:/loginForm");
 		}
+		return mav;
+	}
+	
+	//강의 세부 정보 조회 
+	@GetMapping("/lecture/detail")
+	public ModelAndView getLectureDetail(ModelAndView mav, HttpServletRequest request) throws Exception{
+		mav.setViewName("/lecture/lectureDetail");
 		return mav;
 	}
 }

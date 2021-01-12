@@ -28,7 +28,7 @@
 						placeholder="이메일 입력">
 				</div>
 				<div class="field space">
-					<span class="fa fa-lock"></span> <input type="password" id ="password"
+					<span class="fa fa-lock"></span> <input type="password" onkeyup="enterkey()" id ="password"
 						 name = "password" class="pass-key" required placeholder="비밀번호 입력"> <span
 						class="show">SHOW</span>
 				</div>

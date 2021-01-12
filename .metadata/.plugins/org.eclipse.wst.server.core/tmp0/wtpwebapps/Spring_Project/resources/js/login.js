@@ -12,6 +12,14 @@ $(function(){
 	});
 });
 
+//엔터키를 눌렀을때 로그인 버튼이 먹도록 설정
+function enterkey(){
+	if(window.event.keyCode == 13){
+		login();
+	}
+}
+
+// RSA 적용 로그인 공개키 값을받아서 확인 후 e_mail과 password 를 암호화 하여 Controller에게 넘긴다
 function login(){
 	var $e_mail = $("#hiddenForm input[name='e_mail']");
 	var $password = $("#hiddenForm input[name='password']");
