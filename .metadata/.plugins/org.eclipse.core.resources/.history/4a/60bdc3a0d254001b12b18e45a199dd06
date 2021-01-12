@@ -1,0 +1,64 @@
+package com.jscompany.springproject.controller.lecture;
+
+import java.util.List;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.jscompany.springproject.common.FileManager;
+import com.jscompany.springproject.model.lecture.service.LectureService;
+import com.jscompany.springproject.model.lecture.service.Lecture_SubCategoryService;
+import com.jscompany.springproject.model.lecture.service.Lecture_TopCategoryService;
+
+@Controller
+public class LectureController {
+	
+	@Autowired
+	private Lecture_TopCategoryService lecture_TopCategoryService; 
+	
+	@Autowired
+	private Lecture_SubCategoryService lecture_SubCategoryService; 
+	
+	@Autowired
+	private LectureService lectureService;
+	
+	@Autowired
+	private FileManager fileManager;
+	
+	private ServletContext servletContext;
+	
+	public void setServletContext(ServletContext servletContext) {
+		this.servletContext = servletContext;
+		fileManager.
+	}
+	
+	@GetMapping("/lecture/registForm")
+	public ModelAndView getRegistForm(ModelAndView mav) throws Exception{
+		List topList = lecture_TopCategoryService.selectAll();
+		List diffList = lectureService.selectDiff();
+		mav.addObject("topList",topList);
+		mav.addObject("diffList", diffList);
+		mav.setViewName("lecture/regist");
+		return mav;
+	}
+	
+	@GetMapping("/lecture/getSubCategory")
+	@ResponseBody
+	public List getSubCategory(HttpServletRequest request) throws Exception {
+		String subCategory_id =  request.getParameter("subCategory_id");
+		List subList = lecture_SubCategoryService.selectByTopId(Integer.parseInt(subCategory_id));
+		return subList;
+	}
+	
+	@PostMapping("/lecture/regist")
+	public ModelAndView lectureRegist(ModelAndView mav) {
+		return mav;
+	}
+}

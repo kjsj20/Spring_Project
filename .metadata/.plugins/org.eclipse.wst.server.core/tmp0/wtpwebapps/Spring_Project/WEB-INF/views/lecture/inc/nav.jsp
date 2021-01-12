@@ -29,7 +29,7 @@
          		<li class="nav-item"><a href="/admin/list" class="nav-link">AdminPage</a></li>
          	<%} %>
          	 <%if(member.getTeacher_state_id() == 1) {%>
-         		<li class="nav-item"><a href="/lecture/registForm" class="nav-link">TeacherPage</a></li>
+         		<li class="nav-item"><a href="/lecture/list" class="nav-link">TeacherPage</a></li>
          	<%} %>
          <%} %>
      </ul>

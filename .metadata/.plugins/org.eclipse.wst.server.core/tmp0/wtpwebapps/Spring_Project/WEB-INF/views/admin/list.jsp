@@ -3,9 +3,8 @@
 <%@page import="java.util.List"%>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-	List<Member> memberList = (List)request.getAttribute("memberList");
 	Pager pager = (Pager)request.getAttribute("pager");
-	pager.init(request, memberList);
+	List<Member> memberList = pager.getList();
 	Member memberSession = (Member)session.getAttribute("member");
 %>
 <!DOCTYPE html>
@@ -17,13 +16,21 @@
 <link rel="stylesheet" href="/resources/css/admin/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/resources/js/admin/main.js"></script>
-
+<script>
+	function back(){
+		alert('접근할 수 없습니다');
+		history.back();
+	}
+</script>
 </head>
 <body>
-	<%if(memberSession.getAdmin_state() !=1){%>
+	<%if(session.getAttribute("member")==null) {%>
 		<script>
-			alert('접근 할 수 없습니다.');
-			history.back();
+			back();
+		</script>
+	<%} else if(memberSession.getAdmin_state() !=1){%>
+		<script>
+			back();			
 		</script>
 	<%} %>
 	<%@ include file="./inc/sidebar.jsp"%>

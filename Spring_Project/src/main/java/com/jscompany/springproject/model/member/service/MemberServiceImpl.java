@@ -14,10 +14,10 @@ import com.jscompany.springproject.model.member.repository.MemberDAO;
 public class MemberServiceImpl implements MemberService{
 	
 	@Autowired
-	MemberDAO memberDAO;
+	private MemberDAO memberDAO;
 	
 	@Autowired
-	SecureManager secureManager;  
+	private SecureManager secureManager;  
 	
 	public List selectAll() throws Exception{
 		return memberDAO.selectAll();

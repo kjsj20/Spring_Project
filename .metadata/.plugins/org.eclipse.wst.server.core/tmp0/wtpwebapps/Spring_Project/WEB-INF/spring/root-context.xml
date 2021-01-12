@@ -31,6 +31,7 @@
 		<constructor-arg ref="sqlSessionFactoryBean"/>
 	</bean>
 	
+	
 	<!-- 회원가입 이메일 인증방식 사용을 위한 bean등록  -->
 	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
 		<property name="host" value="smtp.gmail.com" />

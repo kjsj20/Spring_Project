@@ -2,8 +2,8 @@
 
 
 <div class="sidebar">
-  <a href="/"><i class="fa fa-fw fa-book"></i> 강의정보</a>
-  <a href="/"><i class="fa fa-fw fa-clipboard"></i> 상세소개</a>
-  <a href="/admin/list"><i class="fa fa-fw fa-cube"></i> 커리큘럼</a>
-  <a href="#contact"><i class="fa fa-fw fa-image"></i> 이미지등록</a>
+  <a class = "active" href="/lecture/list"><i class="fa fa-fw fa-clipboard"></i> 내 강의</a>
+  <a href="/lecture/registForm"><i class="fa fa-fw fa-book"></i> 강의등록</a>
+  <a href="#"><i class="fa fa-fw fa-cube"></i> 커리큘럼</a>
+  <a href="#"><i class="fa fa-fw fa-image"></i> 이미지등록</a>
 </div>

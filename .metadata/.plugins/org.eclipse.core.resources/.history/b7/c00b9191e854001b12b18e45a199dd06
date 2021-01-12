@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Lecture">
+	<select id="selectAll" resultType="Lecture">
+		select * from lecture where member_id = #{member_id}
+	</select>
+
+	<insert id="insert" parameterType="Lecture">
+		insert into lecture(lecture_id, member_id, difficulty_id, 
+							lecture_subcategory_id, lecture_name, 
+							lecture_summary_content, lecture_detail_content,
+							price, logofile)
+					values(seq_lecture.nextval, #{member_id}, #{difficulty_id}, 
+							#{lecture_subcategory_id}, #{lecture_name}, 
+							#{lecture_summary_content}, #{lecture_detail_content},
+							#{price}, #{logofile})
+	</insert>
+</mapper> 

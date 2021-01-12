@@ -1,5 +1,0 @@
-$(function(){
-	$('.delMember').click(function(){
-		alert('?');
-	});
-});

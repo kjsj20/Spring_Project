@@ -8,6 +8,9 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="console"/>
+			<item value="active"/>
+			<item value="siderbar"/>
 			<item value="fa-home"/>
 			<item value="/resources/css/"/>
 			<item value="/resources/"/>
@@ -20,9 +23,6 @@
 			<item value="RSAEncrypt"/>
 			<item value="Message too long for RSA"/>
 			<item value="private"/>
-			<item value="message"/>
-			<item value="pkcs1pad2"/>
-			<item value="login"/>
 		</list>
 		<list key="replacehistory">
 			<item value="/resources/css/board/"/>

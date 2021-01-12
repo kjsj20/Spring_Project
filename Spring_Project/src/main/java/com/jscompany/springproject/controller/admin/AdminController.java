@@ -17,14 +17,14 @@ import com.jscompany.springproject.model.member.service.MemberService;
 public class AdminController {
 	
 	@Autowired
-	MemberService memberService;
+	private MemberService memberService;
 	@Autowired
-	Pager pager;
+	private Pager pager;
 	
 	@GetMapping("/admin/list")
-	public ModelAndView getMemberList(ModelAndView mav) throws Exception{
+	public ModelAndView getMemberList(ModelAndView mav,HttpServletRequest request) throws Exception{
 		List memberList = memberService.selectAll();
-		mav.addObject("memberList", memberList);
+		pager.init(request, memberList);
 		mav.addObject("pager", pager);
 		mav.setViewName("admin/list");
 		return mav;

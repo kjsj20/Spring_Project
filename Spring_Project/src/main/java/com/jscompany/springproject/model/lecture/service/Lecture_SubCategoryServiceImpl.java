@@ -11,7 +11,7 @@ import com.jscompany.springproject.model.lecture.repository.Lecture_SubCategoryD
 public class Lecture_SubCategoryServiceImpl implements Lecture_SubCategoryService{
 	
 	@Autowired
-	Lecture_SubCategoryDAO lecture_SubCategoryDAO;
+	private Lecture_SubCategoryDAO lecture_SubCategoryDAO;
 	
 	public List selectByTopId(int lecture_topcategory_id) throws Exception {
 		return lecture_SubCategoryDAO.selectByTopId(lecture_topcategory_id);

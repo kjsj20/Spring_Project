@@ -1,0 +1,11 @@
+package com.jscompany.springproject.model.lecture.service;
+
+public class LectureServiceImpl implements LectureService{
+
+	@Override
+	public void regist() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

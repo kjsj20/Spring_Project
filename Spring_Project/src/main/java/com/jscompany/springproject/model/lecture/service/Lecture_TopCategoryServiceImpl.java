@@ -11,7 +11,7 @@ import com.jscompany.springproject.model.lecture.repository.Lecture_TopCategoryD
 public class Lecture_TopCategoryServiceImpl implements Lecture_TopCategoryService{
 	
 	@Autowired
-	Lecture_TopCategoryDAO lecture_TopCategoryDAO;
+	private Lecture_TopCategoryDAO lecture_TopCategoryDAO;
 	
 	public List selectAll() throws Exception {
 		return lecture_TopCategoryDAO.selectAll();

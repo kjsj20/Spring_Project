@@ -1,0 +1,19 @@
+package com.jscompany.springproject.model.lecture.repository;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.jscompany.springproject.model.domain.lecture.Lecture;
+
+@Repository
+public class MybatisLectureDAO implements LectureDAO{
+	
+	@Autowired
+	private SqlSessionTemplate sqlSessionTemplate;
+	
+	public void insert() {
+		sqlSessionTemplate.insert("Lecture.insert", lecture);
+	}
+
+}

@@ -1,4 +1,10 @@
 $(function(){
+	
+	$('.sidebar').find('a').click(function(){
+		$('.sidebar').find('a').removeClass("active");
+		$(this).addClass("active");
+	});
+	
 	$('.delMember').click(function(){
 		if(confirm("정말 삭제 하시겠습니까?")){
 			delMember(this.id, $("#currentPage").val());

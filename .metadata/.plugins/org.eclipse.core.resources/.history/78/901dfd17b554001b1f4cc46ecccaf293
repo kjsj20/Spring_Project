@@ -1,0 +1,8 @@
+package com.jscompany.springproject.model.lecture.service;
+
+import com.jscompany.springproject.model.domain.lecture.Lecture;
+
+public interface LectureService {
+	public void regist(Lecture lecture);
+	public List selectDiff()
+}

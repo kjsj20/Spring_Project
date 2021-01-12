@@ -1,0 +1,9 @@
+package com.jscompany.springproject.model.lecture.service;
+
+public class LectureServiceImpl implements LectureService{
+
+	public void regist() {
+		
+	}
+
+}

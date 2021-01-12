@@ -10,10 +10,14 @@
 		<typeAlias type="com.jscompany.springproject.model.domain.member.Member" alias="Member" />
 		<typeAlias type="com.jscompany.springproject.model.domain.lecture.Lecture_TopCategory" alias="Lecture_TopCategory" />
 		<typeAlias type="com.jscompany.springproject.model.domain.lecture.Lecture_SubCategory" alias="Lecture_SubCategory" />
+		<typeAlias type="com.jscompany.springproject.model.domain.lecture.Lecture" alias="Lecture" />
+		<typeAlias type="com.jscompany.springproject.model.domain.lecture.Difficulty" alias="Difficulty" />
 	</typeAliases>
 	<mappers>
 		<mapper	resource="com/jscompany/springproject/mybatis/mappers/MemberMapper.xml" />
 		<mapper	resource="com/jscompany/springproject/mybatis/mappers/Lecture_TopCategoryMapper.xml" />
 		<mapper	resource="com/jscompany/springproject/mybatis/mappers/Lecture_SubCategoryMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mappers/LectureMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mappers/DifficultyMapper.xml" />
 	</mappers>
 </configuration>
