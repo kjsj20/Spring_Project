@@ -43,7 +43,6 @@ function signUp() {
 		type: "POST",
 		data: $(".signup-form").serialize(),
 		success: function(data){
-			console.log(data);
 			if(data == 0){
 				$('#signUpComplete').html("<font color='#1263CE'>회원님의 메일로 인증메일을 발송 하였습니다. <br> 인증 완료후 로그인 해주세요.</font>");
 			} else {

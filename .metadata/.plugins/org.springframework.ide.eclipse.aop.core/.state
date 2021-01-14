@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="Spring_Project"/>
+<aop-project name="Spring_Project">
+<aspect-definition advice-class-name="com.jscompany.springproject.aop.LectureDataAspect" advice-method-name="getGlobalData" advice-type="AROUND" aspect-end-line-number="35" aspect-name="lectureDataAspect" aspect-start-line-number="35" factory-id="org.springframework.ide.eclipse.aop.core.beanAspectDefinitionElementFactory" file="/Spring_Project/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" pointcut-expression="execution(public * com.jscompany.springproject.controller.lecture..*(..))" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:Spring_Project|3:src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml|7:beans:beans:10|8:lectureController:10" bean-file="/Spring_Project/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" bean-start-line="10" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/Spring_Project/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" source="=Spring_Project/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jscompany.springproject.aop{LectureDataAspect.java[LectureDataAspect~getGlobalData~QProceedingJoinPoint;" source-start-line="21" target="=Spring_Project/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.jscompany.springproject.controller.lecture{LectureController.java[LectureController~setServletContext~QServletContext;" target-start-line="50"/>
+</aspect-definition>
+</aop-project>
 </aop-reference-model>

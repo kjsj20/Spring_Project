@@ -31,6 +31,16 @@
 		<constructor-arg ref="sqlSessionFactoryBean"/>
 	</bean>
 	
+	<tx:advice id="sectionTx" transaction-manager="dataSourceTransactionManager">
+		<tx:attributes>
+			<tx:method name="sectionRegist" propagation="REQUIRED" rollback-for="Exception"/>
+		</tx:attributes>
+	</tx:advice>
+	
+	<aop:config>
+		<aop:pointcut expression="execution(public * com.jscompany.springproject.model.lecture.service..*(**))" id="txPointCut"/>
+		<aop:advisor advice-ref="sectionTx" pointcut-ref="txPointCut"/>
+	</aop:config>
 	
 	<!-- 회원가입 이메일 인증방식 사용을 위한 bean등록  -->
 	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">

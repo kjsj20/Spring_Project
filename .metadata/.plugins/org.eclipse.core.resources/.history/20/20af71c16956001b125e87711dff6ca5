@@ -1,0 +1,5 @@
+package com.jscompany.springproject.model.lecture.repository;
+
+public interface SectionDAO {
+
+}

@@ -34,7 +34,7 @@
 			back();			
 		</script>
 	<%} %>
-	<%@ include file="./inc/sidebar.jsp"%>
+	<%@ include file="./inc/sidebar_list.jsp"%>
 
 	<table>
 		<tr>
@@ -62,26 +62,26 @@
 				<%if(lecture.getLecture_use_state() == 1){%> 승인완료 <%} else if(lecture.getLecture_use_state() == 2) {%> 승인반려 <%} else {%> 승인대기 <%} %>
 			</td>
 			<td>
-				<input class="addSection" type="button" value="섹션추가" style="margin-left:2px;"/>
-				<input class="updateLecture" type="button" value="수정" style="margin-left:8px;"/>
-				<input class="delMember" type="button" value="삭제" style="margin-left:8px;"/>
+				<input name="addSection" class="<%=lecture.getLecture_id() %>" type="button" value="섹션추가" style="margin-left:2px;"/>
+				<input name = "updateLecture" class="<%=lecture.getLecture_id() %>" type="button" value="수정" style="margin-left:8px;"/>
+				<input name = "delLacture" class="<%=lecture.getLecture_id() %>" type="button" value="삭제" style="margin-left:8px;"/>
 				<input id="currentPage" type="hidden" value="<%=pager.getCurrentPage()%>"/>
 			</td>
 		</tr>
 		<%} %>
 		<tr>
 			<td colspan="5" style="text-align: center"><a id="blockPage"
-				href="/admin/list?currentPage=<%=1%>">◀◀</a> <%if(pager.getCurrentPage() > 1){%>
+				href="/lecture/list?currentPage=<%=1%>">◀◀</a> <%if(pager.getCurrentPage() > 1){%>
 				<a id="blockPage"
-				href="/admin/list?currentPage=<%=pager.getFirstPage() - pager.getBlockSize()%>">◀</a>
+				href="/lecture/list?currentPage=<%=pager.getFirstPage() - pager.getBlockSize()%>">◀</a>
 				<%}else{ %> <a id="blockPage">◀</a> <%} %> <%for(int i = pager.getFirstPage(); i < pager.getLastPage() + 1; i++){ %>
 				<%if(pager.getTotalPage() < i)break; %> <a id="blockPage"
 				<%if(pager.getCurrentPage() == i){ %> class="curPage" <%} %>
-				href="/admin/list?currentPage=<%=i%>"><%=i %></a> <%} %> <%if(pager.getCurrentPage() == pager.getTotalPage()) {%>
+				href="/lecture/list?currentPage=<%=i%>"><%=i %></a> <%} %> <%if(pager.getCurrentPage() == pager.getTotalPage()) {%>
 				<a id="blockPage">▶</a> <%} else { %> <a id="blockPage"
-				href="/admin/list?currentPage=<%=pager.getLastPage() + 1%>">▶</a>
+				href="/lecture/list?currentPage=<%=pager.getLastPage() + 1%>">▶</a>
 				<%} %> <a id="blockPage"
-				href="/admin/list?currentPage=<%=pager.getTotalPage()%>">▶▶</a></td>
+				href="/lecture/list?currentPage=<%=pager.getTotalPage()%>">▶▶</a></td>
 		</tr>
 	</table>
 

@@ -17,7 +17,7 @@
 <script src="/resources/js/lecture/regist.js"></script>
 </head>
 <body>
-	<%@ include file="./inc/sidebar.jsp"%>
+	<%@ include file="./inc/sidebar_regist.jsp"%>
 	
 	<form>
   		<div class="container">

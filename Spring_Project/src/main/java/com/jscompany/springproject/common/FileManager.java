@@ -16,7 +16,7 @@ import lombok.Data;
 @Component /*component-scan의 대상 중 하나임..*/
 public class FileManager {
 	private static final Logger logger = LoggerFactory.getLogger(FileManager.class);
-	private String saveLogoImgDir="/resources/data/logoImages";
+	private String saveLogoImgDir="/resources/data/logo";
 	
 	//확장자만 추출하기 
 	public static String getExtend(String path) {

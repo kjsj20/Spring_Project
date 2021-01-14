@@ -6,24 +6,30 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.context.ServletContextAware;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.jscompany.springproject.common.FileManager;
 import com.jscompany.springproject.common.Pager;
 import com.jscompany.springproject.model.domain.lecture.Lecture;
+import com.jscompany.springproject.model.domain.lecture.Section;
+import com.jscompany.springproject.model.domain.lecture.Section_detail;
 import com.jscompany.springproject.model.domain.member.Member;
 import com.jscompany.springproject.model.lecture.service.LectureService;
 import com.jscompany.springproject.model.lecture.service.Lecture_SubCategoryService;
-import com.jscompany.springproject.model.lecture.service.Lecture_TopCategoryService;
+import com.jscompany.springproject.model.lecture.service.SectionService;
 
 @Controller
-public class LectureController {
-	
+public class LectureController implements ServletContextAware{
+	private static final Logger logger=LoggerFactory.getLogger(LectureController.class);
 	@Autowired
 	private Lecture_SubCategoryService lecture_SubCategoryService; 
 	
@@ -32,6 +38,9 @@ public class LectureController {
 	
 	@Autowired
 	private FileManager fileManager;
+	
+	@Autowired
+	private SectionService sectionService;
 	
 	@Autowired
 	private Pager pager;
@@ -62,7 +71,7 @@ public class LectureController {
 	//강의 등록 메서드
 	@PostMapping("/lecture/regist")
 	@ResponseBody
-	public void lectureRegist(ModelAndView mav, Lecture lecture) throws Exception{
+	public void lectureRegist(ModelAndView mav, Lecture lecture, HttpServletRequest request) throws Exception{
 		lectureService.regist(fileManager, lecture);
 	}
 	
@@ -85,7 +94,55 @@ public class LectureController {
 	//강의 세부 정보 조회 
 	@GetMapping("/lecture/detail")
 	public ModelAndView getLectureDetail(ModelAndView mav, HttpServletRequest request) throws Exception{
+		int lecture_id = Integer.parseInt(request.getParameter("lecture_id"));
+		Lecture lecture = lectureService.selectByLectureId(lecture_id);
+		mav.addObject("lecture",lecture);
 		mav.setViewName("/lecture/lectureDetail");
 		return mav;
 	}
+	
+	//강의 데이터 수정 
+	@PostMapping("/lecture/lectureEdit")
+	@ResponseBody
+	public int lectureEdit(Lecture lecture, HttpServletRequest request)throws Exception{
+		int result = lectureService.update(fileManager,lecture);
+		return result;
+	}
+	
+	//강의 삭제
+	@GetMapping("/lecture/delete")
+	@ResponseBody
+	public int lectureDel(HttpServletRequest request)throws Exception{
+		String lecture_id =  request.getParameter("lecture_id");
+		String currentPage =  request.getParameter("currentPage");
+		lectureService.delete(Integer.parseInt(lecture_id));
+		return Integer.parseInt(currentPage);
+	}
+	
+	//섹션 추가폼으로 이동
+	@GetMapping("/lecture/sectionRegistFrom")
+	public ModelAndView sectionRegistForm(HttpServletRequest request, ModelAndView mav) {
+		
+		mav.setViewName("/lecture/section/sectionRegist");
+		return mav;
+	}
+	
+	//섹션 추가
+	@PostMapping("/lecture/sectionRegist")
+	@ResponseBody
+	public void sectionRegist(@RequestParam(value="sectionList") List<String> sectionList, 
+										@RequestParam(value="classList") List<String> classList,
+										@RequestParam(value="urlList") List<String> urlList,
+										@RequestParam(value="countList") List<Integer> countList,
+										HttpServletRequest request, Section section, Section_detail section_detail) throws Exception{
+		String lecture_id = request.getParameter("lecture_id");
+		section.setLecture_id(Integer.parseInt(lecture_id));
+		sectionService.regist(section, section_detail, classList, urlList, countList , sectionList);
+		
+		logger.debug("리스트 내용 : "+ sectionList);
+		logger.debug("수업 내용 : "+ classList);
+		logger.debug("url 내용 : "+ urlList);
+		logger.debug("갯수 내용 : "+ countList);
+	}
+	
 }

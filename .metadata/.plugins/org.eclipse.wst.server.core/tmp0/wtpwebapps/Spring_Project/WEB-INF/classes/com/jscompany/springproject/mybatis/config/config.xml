@@ -12,6 +12,8 @@
 		<typeAlias type="com.jscompany.springproject.model.domain.lecture.Lecture_SubCategory" alias="Lecture_SubCategory" />
 		<typeAlias type="com.jscompany.springproject.model.domain.lecture.Lecture" alias="Lecture" />
 		<typeAlias type="com.jscompany.springproject.model.domain.lecture.Difficulty" alias="Difficulty" />
+		<typeAlias type="com.jscompany.springproject.model.domain.lecture.Section" alias="Section" />
+		<typeAlias type="com.jscompany.springproject.model.domain.lecture.Section_detail" alias="Section_detail" />
 	</typeAliases>
 	<mappers>
 		<mapper	resource="com/jscompany/springproject/mybatis/mappers/MemberMapper.xml" />
@@ -19,5 +21,7 @@
 		<mapper	resource="com/jscompany/springproject/mybatis/mappers/Lecture_SubCategoryMapper.xml" />
 		<mapper	resource="com/jscompany/springproject/mybatis/mappers/LectureMapper.xml" />
 		<mapper	resource="com/jscompany/springproject/mybatis/mappers/DifficultyMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mappers/SectionMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mappers/Section_DetailMapper.xml" />
 	</mappers>
 </configuration>

@@ -1,0 +1,60 @@
+<%@page import="com.jscompany.springproject.model.domain.lecture.Lecture_TopCategory"%>
+<%@page import="java.util.List"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	List<Lecture_TopCategory> topList = (List)request.getAttribute("topList");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/resources/css/lecture/regist.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/resources/js/admin/main.js"></script>
+</head>
+<body>
+	<%@ include file="../inc/sidebar_regist.jsp"%>
+	
+	<form>
+  		<div class="container">
+	  		<h1>섹션 등록</h1>  <div><i class="fa fa-fw fa-plus-circle"></i>섹션추가</div>
+	    	<hr>
+			
+		    <table>
+			  <tr>
+			    <td>
+			    	<b><label>섹션명</label></b>
+			    	<div style="display:inline-block"><i class="fa fa-fw fa-plus-circle"></i>수업추가</div>
+			    	<div><i class="fa fa-fw fa-minus-circle"></i>섹션삭제</div></br>
+			    	<input type="text" placeholder="ex ) 1교시 자바의 기초"> 
+			    </td>
+			  </tr>
+			  <tr>
+			  	<td>
+			  		<input type="text" placeholder="ex ) 자바 프로그래밍 기초"  id="sec1" />
+			  		<input type="text" placeholder="ex ) 자바 프로그래밍 기초"  id="sec2" />
+				</td>
+			  </tr>
+			</table>
+		     <table>
+			  <tr>
+			    <td>
+			    	<input type="text"> 
+			    </td>
+			  </tr>
+			  <tr>
+			  	<td>
+			  		<input type="text" placeholder="ex ) 자바 프로그래밍 기초"  id="sec1" />
+			  		<input type="text" placeholder="ex ) 자바 프로그래밍 기초"  id="sec2" />
+				</td>
+			  </tr>
+			</table>
+		    
+		
+		    <button type="button" class="registerbtn">등록</button>
+		</div>
+	</form>
+</body>
+</html>

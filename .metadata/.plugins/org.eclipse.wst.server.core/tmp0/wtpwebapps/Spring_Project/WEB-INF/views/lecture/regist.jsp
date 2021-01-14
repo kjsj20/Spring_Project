@@ -18,10 +18,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="//cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
 <script src="/resources/js/admin/main.js"></script>
-<script src="/resources/js/lecture/regist.js"></script>
+<script src="/resources/js/lecture/crud.js"></script>
 </head>
 <body>
-	<%@ include file="./inc/sidebar.jsp"%>
+	<%@ include file="./inc/sidebar_regist.jsp"%>
 	
 	<form id = "LectureRegistForm">
   		<div class="container">

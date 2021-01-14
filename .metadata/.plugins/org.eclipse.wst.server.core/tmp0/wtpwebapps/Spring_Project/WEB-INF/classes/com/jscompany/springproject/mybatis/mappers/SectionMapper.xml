@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Section">
+	<insert id="insert" parameterType="Section">
+		insert into section(section_id, lecture_id, section_name) values(seq_section.nextval, #{lecture_id}, #{section_name})
+		<selectKey order="AFTER" keyProperty="section_id" resultType="int">
+			select seq_section.currval as section_id from dual
+		</selectKey>
+	</insert>
+</mapper> 

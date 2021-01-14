@@ -1,0 +1,11 @@
+package com.jscompany.springproject.model.lecture.repository;
+
+public class MybatisSectionDAO implements SectionDAO {
+
+	@Override
+	public int insert() throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

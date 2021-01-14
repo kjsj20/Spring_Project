@@ -8,21 +8,21 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="registOrder"/>
+			<item value="sectionList"/>
 			<item value="console"/>
-			<item value="active"/>
-			<item value="siderbar"/>
-			<item value="fa-home"/>
-			<item value="/resources/css/"/>
-			<item value="/resources/"/>
-			<item value=".ftco-navbar-light .navbar-nav &gt; .nav-item &gt; .nav-link"/>
-			<item value="ftco-navbar-light"/>
-			<item value="ftco-navbar"/>
-			<item value="navbar-collapse"/>
-			<item value="Home"/>
-			<item value="n ="/>
-			<item value="RSAEncrypt"/>
-			<item value="Message too long for RSA"/>
-			<item value="private"/>
+			<item value="classArr"/>
+			<item value="updateLecture"/>
+			<item value="addSection"/>
+			<item value="number"/>
+			<item value="lecTitle"/>
+			<item value="&quot;lecTitle&quot;"/>
+			<item value="섹션"/>
+			<item value="admin"/>
+			<item value="lecture_id"/>
+			<item value="console.log"/>
+			<item value="sidebar"/>
+			<item value="subRadio"/>
 		</list>
 		<list key="replacehistory">
 			<item value="/resources/css/board/"/>

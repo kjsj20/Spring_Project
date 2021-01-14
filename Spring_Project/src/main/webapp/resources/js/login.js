@@ -31,9 +31,6 @@ function login(){
 	var e_mail = $("#loginForm").find("#e_mail").val();
     var password = $("#loginForm").find("#password").val();
 	
-	console.log(e_mail);
-	console.log(password);
-	
 	$e_mail.val(rsa.encrypt(e_mail)); // 아이디 암호화
     $password.val(rsa.encrypt(password)); // 비밀번호 암호화
 
