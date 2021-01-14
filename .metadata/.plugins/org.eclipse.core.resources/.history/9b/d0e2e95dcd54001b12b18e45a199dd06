@@ -1,0 +1,8 @@
+package com.jscompany.springproject.model.lecture.repository;
+
+import com.jscompany.springproject.model.domain.lecture.Lecture;
+
+public interface LectureDAO {
+	public void insert();
+	public void selectAll();
+}

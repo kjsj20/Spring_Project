@@ -1,0 +1,5 @@
+package com.jscompany.springproject.aop;
+
+public class LectureDataAspect {
+
+}

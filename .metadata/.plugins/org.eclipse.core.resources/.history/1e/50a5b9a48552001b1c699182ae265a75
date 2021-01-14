@@ -1,0 +1,10 @@
+package com.jscompany.springproject.model.member.service;
+
+import java.util.List;
+
+import com.jscompany.springproject.model.domain.Member;
+
+public interface MemberService {
+	public List selectAll();
+	public void regist(Member member);
+}

@@ -1,0 +1,16 @@
+package com.jscompany.springproject.model.member.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class MemberServiceImpl implements MemberService{
+	
+	
+	
+	public List selectAll() {
+		return null;
+	}
+	
+}

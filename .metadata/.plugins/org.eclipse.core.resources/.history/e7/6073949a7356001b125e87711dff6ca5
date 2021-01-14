@@ -1,0 +1,7 @@
+package com.jscompany.springproject.model.lecture.repository;
+
+public interface Section_DetailDAO {
+	public void insert() {
+		
+	}
+}

@@ -1,0 +1,14 @@
+package com.jscompany.springproject.model.lecture.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class Lecture_TopCategoryServiceImpl implements Lecture_TopCategoryService{
+	
+	public List selectAll() throws Exception {
+		return null;
+	}
+
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="jdbcTypeForNull" value="VARCHAR" />
+	</settings>
+	<typeAliases>
+		<typeAlias type="com.jscompany.springproject.model.domain.member.Member" alias="Member" />
+		<typeAlias type="com.jscompany.springproject.model.domain.member.Lecture_TopCategory" alias="Lecture_TopCategory" />
+		<typeAlias type="com.jscompany.springproject.model.domain.member.Lecture_SubCategory" alias="Lecture_SubCategory" />
+	</typeAliases>
+	<mappers>
+		<mapper
+			resource="com/jscompany/springproject/mybatis/mappers/MemberMapper.xml" />
+	</mappers>
+</configuration>

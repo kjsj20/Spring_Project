@@ -1,0 +1,5 @@
+package com.jscompany.springproject.model.board.service;
+
+public class NoticeService {
+
+}

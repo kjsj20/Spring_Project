@@ -1,0 +1,20 @@
+<%@page import="com.jscompany.springproject.model.domain.Member"%>
+<%@page import="java.util.List"%>
+<%@ page  contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	List<Member> memberList = (List)request.getAttribute("memberList");
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+	<%for(Member member : memberList){ %>
+		<%=member.getMember_id() %>
+		<%=member.getE_mail_id() + member.getE_mail_server()%>
+		<%=member.%>
+	<%} %>
+</body>
+</html>

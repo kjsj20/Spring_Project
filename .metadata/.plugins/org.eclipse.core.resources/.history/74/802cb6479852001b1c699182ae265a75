@@ -1,0 +1,43 @@
+package com.jscompany.springproject.model.member.repository;
+
+import java.util.List;
+import java.util.Map;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.jscompany.springproject.exception.MemberRegistException;
+import com.jscompany.springproject.model.domain.Member;
+
+@Repository
+public class MybatisMemberDAO implements MemberDAO{
+	
+	@Autowired
+	private SqlSessionTemplate sqlSessionTemplate;
+
+	public List selectAll() {		 
+		return sqlSessionTemplate.selectList("Member.selectAll");
+	}
+
+	public void insert(Member member) {
+		sqlSessionTemplate.insert("Member.insert", member);
+	}
+
+	public void updateAuthKey(Map map) {
+		sqlSessionTemplate.update("Member.updateAuthKey", map);
+	}
+
+	public void updateAuthStatus(Map map) {
+		sqlSessionTemplate.update("Member.updateAuthStatus", map);
+	}
+
+	public int idCheck(Member member) throws MemberRegistException {
+		int result = sqlSessionTemplate.selectOne("Member.idCheck", member);
+		if(result==1) {
+			throw new MemberRegistException("이미 가입된 이메일 입니다.. 다시 한번 확인해 주세요");
+		}
+		return result;
+	}
+	
+}

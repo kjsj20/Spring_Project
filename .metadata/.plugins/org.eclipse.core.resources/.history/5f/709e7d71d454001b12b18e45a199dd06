@@ -1,0 +1,33 @@
+package com.jscompany.springproject.model.lecture.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.jscompany.springproject.model.domain.lecture.Difficulty;
+import com.jscompany.springproject.model.domain.lecture.Lecture;
+import com.jscompany.springproject.model.lecture.repository.DifficultyDAO;
+import com.jscompany.springproject.model.lecture.repository.LectureDAO;
+
+@Service
+public class LectureServiceImpl implements LectureService{
+	
+	@Autowired
+	private LectureDAO lectureDAO;
+	 
+	@Autowired
+	private DifficultyDAO difficultyDAO;
+	
+	public void regist(Lecture lecture) {
+//		lectureDAO.insert(lecture); 
+	}
+	
+	
+	//난이도 DAO에 난이도 테이블 select 요청
+	public List selectDiff() throws Exception {
+		return difficultyDAO.selectAll();  
+	}
+	
+
+}

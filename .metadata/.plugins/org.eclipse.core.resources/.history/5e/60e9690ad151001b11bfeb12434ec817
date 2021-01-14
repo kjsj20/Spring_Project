@@ -1,0 +1,15 @@
+package com.jscompany.springproject.model.domain;
+
+
+
+
+public class Member {
+	private int member_id;
+	private String e_mail_id;
+	private String e_mail_server;
+	private String phone;
+	private String birth_date;
+	private String password;
+	private String user_name;
+	private int teacher_state_id;
+}

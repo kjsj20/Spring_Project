@@ -1,0 +1,6 @@
+package com.jscompany.springproject.model.domain.lecture;
+
+@Data
+public class Lecture {
+
+}

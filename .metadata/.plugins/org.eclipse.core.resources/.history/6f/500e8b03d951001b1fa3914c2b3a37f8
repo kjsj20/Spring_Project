@@ -1,0 +1,5 @@
+package com.jscompany.springproject.model.member.service;
+
+public class MemberServiceImpl {
+
+}
