@@ -1,6 +1,0 @@
-package com.jscompany.springproject.model.member.service;
-
-@Service
-public class MemberServiceImpl implements MemberService{
-
-}

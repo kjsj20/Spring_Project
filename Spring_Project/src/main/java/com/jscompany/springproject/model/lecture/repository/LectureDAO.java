@@ -10,4 +10,5 @@ public interface LectureDAO {
 	public void insert(Lecture lecture) throws Exception;
 	public int update(Lecture lecture) throws Exception;
 	public int delete(int lecture_id) throws Exception;
+	public List selectByTopId(int topcategory_id) throws Exception;
 }

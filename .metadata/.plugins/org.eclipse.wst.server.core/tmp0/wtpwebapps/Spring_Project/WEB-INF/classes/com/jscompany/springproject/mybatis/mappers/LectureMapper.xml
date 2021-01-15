@@ -15,6 +15,12 @@
 		AND LECTURE_ID = #{lecture_id}
 	</select>
 	
+	<select id="selectByTopId" resultType="Lecture" parameterType="int">
+		SELECT lecture_topcategory_id,lecture_id,l.member_id AS member_id, user_name,difficulty_id, l.lecture_subcategory_id AS lecture_subcategory_id, lecture_name, 
+				lecture_summary_content, lecture_detail_content, lecture_use_state, price, logofile, registdate, lecture_subcategory_name 
+		FROM  LECTURE l, LECTURE_SUBCATEGORY ls, member m WHERE l.LECTURE_SUBCATEGORY_ID  = ls.LECTURE_SUBCATEGORY_ID AND l.member_id = m.member_id AND lecture_topcategory_id = #{lecture_topcategory_id}
+	</select>
+	
 	<insert id="insert" parameterType="Lecture">
 		insert into lecture(lecture_id, member_id, difficulty_id, 
 							lecture_subcategory_id, lecture_name, 

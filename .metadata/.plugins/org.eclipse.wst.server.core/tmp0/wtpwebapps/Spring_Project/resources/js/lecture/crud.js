@@ -73,7 +73,7 @@ function lectureEdit(){
 //상위 카테고리를 선택하면 하위 카테고리를 db에서 가져와 값을 radio버튼에 넣음.
 function getSubCategory(id) {
 	$.ajax({
-		url: "/lecture/getSubCategory?subCategory_id=" + id,
+		url: "/lecture/getSubCategory?topCategory_id=" + id,
 		success: function(data) {
 			var tag = '<label for="subRadio"><b>하위 카테고리</b></label><br><br>';
 			for (var i = 0; i < data.length; i++) {

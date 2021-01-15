@@ -63,8 +63,8 @@ public class LectureController implements ServletContextAware{
 	@GetMapping("/lecture/getSubCategory")
 	@ResponseBody
 	public List getSubCategory(HttpServletRequest request) throws Exception {
-		String subCategory_id =  request.getParameter("subCategory_id");
-		List subList = lecture_SubCategoryService.selectByTopId(Integer.parseInt(subCategory_id));
+		String topCategory_id =  request.getParameter("topCategory_id");
+		List subList = lecture_SubCategoryService.selectByTopId(Integer.parseInt(topCategory_id));
 		return subList;
 	}
 	
@@ -143,6 +143,23 @@ public class LectureController implements ServletContextAware{
 		logger.debug("수업 내용 : "+ classList);
 		logger.debug("url 내용 : "+ urlList);
 		logger.debug("갯수 내용 : "+ countList);
+	}
+	
+	//강의 조회폼 
+	@GetMapping("/course/listForm")
+	public ModelAndView getCourseForm(ModelAndView mav, HttpServletRequest request) {
+		mav.setViewName("lecture/course/courselist");
+		return mav;
+	}
+	
+	//강의 조회
+	@GetMapping("/course/list")
+	public ModelAndView getCourse(ModelAndView mav, HttpServletRequest request) throws Exception{
+			String topcategory_id = request.getParameter("topcategory_id");
+			List lectureList = lectureService.selectByTopId(Integer.parseInt(topcategory_id));
+			mav.addObject("lectureList", lectureList);
+			mav.setViewName("lecture/course/courselist");
+			return mav;
 	}
 	
 }

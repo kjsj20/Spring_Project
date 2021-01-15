@@ -12,4 +12,5 @@ public interface LectureService {
 	public List selectDiff() throws Exception;
 	public int update(FileManager fileManager,Lecture lecture) throws Exception;
 	public int delete(int lecture_id) throws Exception;
+	public List selectByTopId(int topcategory_id) throws Exception;
 }

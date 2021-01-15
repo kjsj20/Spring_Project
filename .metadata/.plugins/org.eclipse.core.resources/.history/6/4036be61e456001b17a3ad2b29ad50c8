@@ -1,0 +1,25 @@
+$(function(){
+	$('.topCategory').click(function(){
+		
+	});
+});
+
+//강의 등록 
+function lectureRegist(){
+	var formData = new FormData($('#LectureRegistForm')[0]);
+	
+	$.ajax({
+		url:'/lecture/regist',
+		type:'POST',
+		data: formData,
+		processData: false,
+		contentType: false,
+		success: function(data){
+			alert("등록 성공! 내 강의에서 강의 섹션을 추가해주세요!");
+			location.href = '/lecture/list';
+		},
+		error:function(e){
+			alert('등록중 에러가 발생하였습니다.. 다시 한번 잘 입력되었는지 확인해 보세요');
+		}
+	});	
+}

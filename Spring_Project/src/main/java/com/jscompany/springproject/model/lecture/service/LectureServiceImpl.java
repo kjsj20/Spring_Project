@@ -60,5 +60,10 @@ public class LectureServiceImpl implements LectureService{
 	public int delete(int lecture_id) throws Exception {
 		return lectureDAO.delete(lecture_id);
 	}
+	
+	//탑카테고리 선택시 해당 카테고리에 있는 강의 전체 보여주기
+	public List selectByTopId(int topcategory_id) throws Exception {
+		return lectureDAO.selectByTopId(topcategory_id);
+	}
 
 }

@@ -1,0 +1,28 @@
+$(function(){
+	$('.topCategory').click(function(){
+		alert('클릭');
+		getSubCategory(this.id.replace(/[^0-9]/g, ""));
+	});
+});
+
+//상위 카테고리를 선택하면 하위 카테고리를 db에서 가져옴.
+function getSubCategory(id) {
+	$.ajax({
+		url: "/lecture/getSubCategory?topCategory_id=" + id,
+		success: function(data) {
+			alert('성공');
+			var tag = '<label for="subRadio"><b>하위 카테고리</b></label><br><br>';
+			for (var i = 0; i < data.length; i++) {
+				tag += '<label class="topCategory">' + data[i].lecture_subcategory_name;
+				tag += '<input type="radio" id ="subCategory' + data[i].lecture_subcategory_id + '" class = "subCategory'+data[i].lecture_subcategory_id+'" name="lecture_subcategory_id" value ='+data[i].lecture_subcategory_id+'>'
+				tag += '<span class="checkmark"></span>';
+				tag += '</label>';
+			}
+			$('#category_sub').html(tag);
+			$('#subCategory'+$('.subIdVal').val()).attr('checked',true);
+		},
+		error: function() {
+			alert("하위 카테고리 가져오기 실패..");
+		}
+	});
+}

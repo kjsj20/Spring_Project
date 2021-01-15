@@ -1,5 +1,0 @@
-package com.jscompany.springproject.model.member.service;
-
-public interface MemberService {
-	public List selectAll();
-}

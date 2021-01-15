@@ -39,10 +39,40 @@ public class MybatisMemberDAO implements MemberDAO{
 	public int idCheck(Member member) throws Exception {
 		return sqlSessionTemplate.selectOne("Member.idCheck", member);
 	}
-
-	@Override
-	public void delete(int member_id) throws Exception {
-		sqlSessionTemplate.delete("Member.delete", member_id);
+	
+	//멤버 삭제
+	public int delete(int member_id) throws Exception {
+		return sqlSessionTemplate.delete("Member.delete", member_id);
+	}
+	
+	//멤버 아이디 찾기
+	public String idSearch(String phone_number) throws Exception {
+		return sqlSessionTemplate.selectOne("Member.idSearch",phone_number);
+	}
+	
+	//비밀번호 찾기 시 임시 비밀번호가 저장됨
+	public int passSearchUpdate(Member member) throws Exception {
+		return sqlSessionTemplate.update("Member.passSearchUpdate", member);
+	}
+	
+	//멤버 이름 수정
+	public int nameUpdate(Member member) throws Exception {
+		return sqlSessionTemplate.update("Member.nameUpdate", member);
+	}
+	
+	//멤버 암호 수정
+	public int passUpdate(Member member) throws Exception {
+		return sqlSessionTemplate.update("Member.passUpdate", member);
+	}
+	
+	//멤버 휴대전화번호 수정
+	public int phoneUpdate(Member member) throws Exception {
+		return sqlSessionTemplate.update("Member.phoneUpdate", member);
+	}
+	
+	//멤버 생년월일 수정
+	public int birthUpdate(Member member) throws Exception {
+		return sqlSessionTemplate.update("Member.birthUpdate", member);
 	}
 
 }

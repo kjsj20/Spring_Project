@@ -66,4 +66,23 @@ public class MailSendService {
 
           return authKey;
     }
+    
+    public void sendPassword(String email ,String password) {
+        try {
+            MailUtils sendMail = new MailUtils(mailSender);
+            sendMail.setSubject("잡아오라 임시 비밀번호");
+            sendMail.setText(new StringBuffer().append("<h1>[잡아오라 임시 비밀번호]</h1>")
+            .append("<p>임시 비밀번호로 접속하여 비밀번호 변경을 하세요.</p>")
+            .append("<p>임시 비밀번호</p>")
+            .append(password)
+            .toString());
+            sendMail.setFrom("kimwotjd95@gmail.com", "관리자");
+            sendMail.setTo(email);
+            sendMail.send();
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+    }
 }
