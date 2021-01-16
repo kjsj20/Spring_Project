@@ -47,4 +47,12 @@ public class MybatisLectureDAO implements LectureDAO{
 		return sqlSessionTemplate.selectList("Lecture.selectByTopId", topcategory_id);
 	}
 
+	public List selectSubList(int subcategory_id) throws Exception {
+		return sqlSessionTemplate.selectList("Lecture.selectSubList", subcategory_id);
+	}
+
+	public List selectByMemberId(int member_id) throws Exception {
+		return sqlSessionTemplate.selectList("Lecture.selectByMemberId", member_id);
+	}
+
 }

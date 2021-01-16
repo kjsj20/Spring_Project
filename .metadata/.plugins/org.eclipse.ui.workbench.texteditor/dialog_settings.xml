@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="del"/>
+		<item key="selection" value="sidebar_list"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="sidebar_list"/>
+			<item value="hr"/>
+			<item value="login"/>
+			<item value="system"/>
+			<item value="로그인"/>
+			<item value="f"/>
+			<item value="수강"/>
+			<item value="hidden"/>
+			<item value="section_detail75"/>
+			<item value="400"/>
+			<item value="getsub"/>
+			<item value="get"/>
 			<item value="d"/>
 			<item value="delete"/>
 			<item value="del"/>
-			<item value="dele"/>
-			<item value="session"/>
-			<item value="idVal"/>
-			<item value="#id"/>
-			<item value="sendAuthMail"/>
-			<item value="pass"/>
-			<item value="Software"/>
-			<item value="software"/>
-			<item value="design"/>
-			<item value="lecturelist"/>
-			<item value="basic"/>
-			<item value="js/"/>
 		</list>
 		<list key="replacehistory">
 			<item value="/resources/js/"/>

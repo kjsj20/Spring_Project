@@ -21,6 +21,8 @@ public class Lecture {
 	private String lecture_topcategory_name;
 	private String lecture_subcategory_name;
 	private String user_name;
+	private int memberhavelecture_id;
+	
 	//이미지를 자동으로 처리하는 객체, 이름을 html의 업로드 컴포넌트 파라미터명과 일치시켜야 자동으로 업로드처리함..
 	private MultipartFile imgFile;
 }

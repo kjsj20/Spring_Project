@@ -157,9 +157,57 @@ public class LectureController implements ServletContextAware{
 	public ModelAndView getCourse(ModelAndView mav, HttpServletRequest request) throws Exception{
 			String topcategory_id = request.getParameter("topcategory_id");
 			List lectureList = lectureService.selectByTopId(Integer.parseInt(topcategory_id));
+			List subList = lecture_SubCategoryService.selectByTopId(Integer.parseInt(topcategory_id));
 			mav.addObject("lectureList", lectureList);
+			mav.addObject("subList", subList);
 			mav.setViewName("lecture/course/courselist");
 			return mav;
 	}
 	
+	//강의 조회
+	@GetMapping("/course/listSub")
+	public ModelAndView getSubCourse(ModelAndView mav, HttpServletRequest request) throws Exception{
+			String topcategory_id = request.getParameter("topcategory_id");
+			String subcategory_id = request.getParameter("subcategory_id");
+			List subList = lecture_SubCategoryService.selectByTopId(Integer.parseInt(topcategory_id));
+			List lectureList = lectureService.selectSubList(Integer.parseInt(subcategory_id));
+			
+			mav.addObject("lectureList", lectureList);
+			mav.addObject("subList", subList);
+			mav.setViewName("lecture/course/courselist");
+			return mav;
+	}
+	
+	//강의 조회폼 
+	@GetMapping("/course/detail")
+	public ModelAndView getCourseDetailForm(ModelAndView mav, HttpServletRequest request) throws Exception{
+		int lecture_id = Integer.parseInt(request.getParameter("lecture_id"));
+		Lecture lecture = lectureService.selectByLectureId(lecture_id);
+		List sectionList = sectionService.selectBylectureID(lecture_id); 
+		List sectionDetailListList = sectionService.selectBySectionId(sectionList);
+		mav.addObject("lecture",lecture);
+		mav.addObject("sectionList",sectionList);
+		mav.addObject("sectionDetailListList", sectionDetailListList);
+		mav.setViewName("lecture/course/course_detail");
+		return mav;
+	}
+	
+	//내 강의 리스트 보기
+	@GetMapping("/mycourselist")
+	public ModelAndView getMyLecture(ModelAndView mav, HttpServletRequest request, int member_id) throws Exception{
+		List lectureList = lectureService.selectByMemberId(member_id);
+		mav.addObject("lectureList", lectureList);
+		mav.setViewName("member/mycourselist");
+		return mav;
+	}
+	
+	@GetMapping("/lectureview")
+	public  ModelAndView lectureViewForm(ModelAndView mav, HttpServletRequest request, int lecture_id) throws Exception{
+		mav.setViewName("/lecture/lectureview");
+		List sectionList = sectionService.selectBylectureID(lecture_id); 
+		List sectionDetailListList = sectionService.selectBySectionId(sectionList);
+		mav.addObject("sectionList",sectionList);
+		mav.addObject("sectionDetailListList", sectionDetailListList);
+		return mav;
+	}
 }

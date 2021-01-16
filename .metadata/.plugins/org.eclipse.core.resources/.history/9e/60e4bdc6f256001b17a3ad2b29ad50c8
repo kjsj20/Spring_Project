@@ -1,4 +1,0 @@
-@charset "UTF-8";
-.active {
-	color : #2E9AFE;
-}

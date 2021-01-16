@@ -31,7 +31,7 @@ public class LectureDataAspect {
 		
 		String uri = request.getRequestURI(); //클라이언트의 요청 URI 스트링 정보
 		
-		if(uri.equals("/lecture/registForm")||uri.equals("/lecture/detail")||uri.equals("/lecture/sectionRegistFrom")||uri.equals("/course/list")) {
+		if(uri.equals("/lecture/registForm")||uri.equals("/lecture/detail")||uri.equals("/lecture/sectionRegistFrom")||uri.equals("/course/list")||uri.equals("/course/listSub")) {
 			List topList = lecture_TopCategoryService.selectAll();
 			List diffList = lectureService.selectDiff();
 			Object returnObj = joinPoint.proceed();

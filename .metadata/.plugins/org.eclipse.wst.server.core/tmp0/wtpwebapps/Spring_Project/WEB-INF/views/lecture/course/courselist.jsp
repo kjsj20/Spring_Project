@@ -1,3 +1,4 @@
+<%@page import="com.jscompany.springproject.model.domain.lecture.Lecture_SubCategory"%>
 <%@page import="com.jscompany.springproject.common.Formatter"%>
 <%@page import="com.jscompany.springproject.model.domain.lecture.Lecture"%>
 <%@page import="com.jscompany.springproject.model.domain.lecture.Difficulty"%>
@@ -6,9 +7,11 @@
 <%@ page  contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 	List<Lecture_TopCategory> topList = (List)request.getAttribute("topList");
+	List<Lecture_SubCategory> subList = (List)request.getAttribute("subList");
 	List<Difficulty> diffList = (List)request.getAttribute("diffList");
 	List<Lecture> lectureList = (List)request.getAttribute("lectureList");
 	String topcategory_id = request.getParameter("topcategory_id");
+	String subcategory_id = request.getParameter("subcategory_id");
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +27,7 @@
 <%@ include file="../inc/nav.jsp" %>
 <!-- END nav -->
 	<input id="topcategory_id" type="hidden" value="<%=topcategory_id %>"/>
+	<input id="subcategory_id" type="hidden" value="<%=subcategory_id %>"/>
 	<section class="hero-wrap hero-wrap-2" style="background-image: url('/resources/images/work-5.jpg');">
 		<div class="overlay"></div>
 		<div class="container">
@@ -50,13 +54,16 @@
 					</div>
 
 					<div class="sidebar-box bg-white p-4 ftco-animate">
-						<h3 class="heading-sidebar">코스 카테고리</h3>
 							<%for(Lecture_TopCategory lecture_TopCategory : topList){ %>
 								<label id="topCategory<%=lecture_TopCategory.getLecture_topcategory_id() %>" class = "topCategory"  style="cursor:pointer;"> <%=lecture_TopCategory.getLecture_topcategory_name()%></label><br>
 							<%} %>
 					</div>
 
 					<div id="subCategoryDiv" class="sidebar-box bg-white p-4 ftco-animate">
+						<h3 class="heading-sidebar">코스</h3>
+						<%for(Lecture_SubCategory lecture_SubCategory : subList){%>
+							<label id="subCategory<%=lecture_SubCategory.getLecture_subcategory_id() %>" class = "subCategory"  style="cursor:pointer;"> <%=lecture_SubCategory.getLecture_subcategory_name()%></label><br>
+						<%} %>
 					</div>
 
 					<div class="sidebar-box bg-white p-4 ftco-animate">
@@ -67,6 +74,7 @@
 							<%} %>
 						</form>
 					</div>
+					
 				</div>
 				<div class="col-lg-9">
 					<div class="row">
@@ -74,11 +82,11 @@
 						<%Lecture lecture = lectureList.get(i); %>
 							<div class="col-md-6 d-flex align-items-stretch ftco-animate">
 								<div class="project-wrap">
-									<a href="#" class="img" style="background-image: url(/resources/data/logo/<%=lecture.getLecture_id()%>.<%=lecture.getLogofile()%>);">
+									<a href="/course/detail?lecture_id=<%=lecture.getLecture_id() %>" class="img" style="background-image: url(/resources/data/logo/<%=lecture.getLecture_id()%>.<%=lecture.getLogofile()%>);">
 										<span class="price"><%=lecture.getLecture_subcategory_name() %></span>
 									</a>
 									<div class="text p-4">
-										<h3><a href="#"><%=lecture.getLecture_name() %></a></h3>
+										<h3><a href="/course/detail?lecture_id=<%=lecture.getLecture_id() %>"><%=lecture.getLecture_name() %></a></h3>
 										<p class="advisor">강사명 : <span><%=lecture.getUser_name() %></span></p>
 										<ul class="d-flex justify-content-between">
 											<li><span class="flaticon-shower"></span></li>
@@ -115,6 +123,7 @@
 <script>
 $(function(){
 	$('#topCategory'+$('#topcategory_id').val()).addClass('active');
+	$('#subCategory'+$('#subcategory_id').val()).addClass('active');
 });
 </script>
 </body>

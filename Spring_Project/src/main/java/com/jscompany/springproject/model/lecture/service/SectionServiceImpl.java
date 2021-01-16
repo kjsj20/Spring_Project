@@ -1,5 +1,6 @@
 package com.jscompany.springproject.model.lecture.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,7 @@ public class SectionServiceImpl implements SectionService{
 	@Autowired
 	private Section_DetailDAO section_DetailDAO;
 	
+	//섹션 등록
 	public void regist(Section section, Section_detail section_detail,List<String> classList,List<String> urlList,List<Integer> countList ,List<String> sectionList) throws Exception {
 		for(int i =0; i < sectionList.size(); i++) {
 			section.setSection_name(sectionList.get(i));
@@ -33,6 +35,23 @@ public class SectionServiceImpl implements SectionService{
 				 section_DetailDAO.insert(section_detail);
 			}
 		}
+	}
+	
+	//섹션 조회
+	public List selectBylectureID(int lecture_id) throws Exception{
+		return sectionDAO.selectBylectureID(lecture_id);
+	}
+	
+	//섹션 세부정보 조회
+	public List selectBySectionId(List<Section> sectionList) throws Exception {
+		List detailList = null;
+		List sectionDetailListList = new ArrayList();
+		for(int i = 0; i < sectionList.size(); i++) {
+			Section section = sectionList.get(i); 
+			detailList = section_DetailDAO.selectBySectionId(section.getSection_id());
+			sectionDetailListList.add(detailList);
+		}
+		return sectionDetailListList;
 	}
 
 }

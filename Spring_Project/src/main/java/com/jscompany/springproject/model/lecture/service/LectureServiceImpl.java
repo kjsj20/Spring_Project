@@ -66,4 +66,12 @@ public class LectureServiceImpl implements LectureService{
 		return lectureDAO.selectByTopId(topcategory_id);
 	}
 
+	public List selectSubList(int subcategory_id) throws Exception {
+		return lectureDAO.selectSubList(subcategory_id);
+	}
+
+	public List selectByMemberId(int member_id) throws Exception {
+		return lectureDAO.selectByMemberId(member_id);
+	}
+
 }

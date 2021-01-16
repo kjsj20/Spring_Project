@@ -12,7 +12,7 @@
 
    <div class="collapse navbar-collapse" id="ftco-nav">
        <ul class="navbar-nav ml-auto">
-         <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
+         <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
          <li class="nav-item"><a href="/course/list?topcategory_id=1" class="nav-link">Course</a></li>
          <li class="nav-item"><a href="/board/notice" class="nav-link">Community</a></li>
          <li class="nav-item">
@@ -23,6 +23,7 @@
 	        <%} %>
          </li>
          <%if(session.getAttribute("member")!=null){//세션에 담겨진 데이터가 없다면 %>
+         <li class="nav-item"><a href="/mycourselist?member_id=<%=member.getMember_id() %>" class="nav-link">DashBoard</a></li>
          <li class="nav-item"><a href="/mypage?mypage=1" class="nav-link">MyPage</a></li>
          <%} %>
          <%if(session.getAttribute("member")!=null){%>
