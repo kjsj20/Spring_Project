@@ -4,8 +4,8 @@
     <div class="row mb-5">
       <div class="col-md pt-5">
         <div class="ftco-footer-widget pt-md-5 mb-4">
-          <h2 class="ftco-heading-2">About</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          <h2 class="ftco-heading-2">잡아오라</h2>
+          <p>코드를 익히는건 산을 오를는것과 같습니다. 조금씩 조금씩 다른 강사분들의 강의를 습득하고 이해하다 보면 자연스래 정상에 위치에 있을겁니다!</p>
           <ul class="ftco-footer-social list-unstyled float-md-left float-lft">
             <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
             <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
@@ -15,38 +15,32 @@
 </div>
 <div class="col-md pt-5">
     <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
-      <h2 class="ftco-heading-2">Help Desk</h2>
+      <h2 class="ftco-heading-2">고객센터</h2>
       <ul class="list-unstyled">
-        <li><a href="#" class="py-2 d-block">Customer Care</a></li>
-        <li><a href="#" class="py-2 d-block">Legal Help</a></li>
-        <li><a href="#" class="py-2 d-block">Services</a></li>
-        <li><a href="#" class="py-2 d-block">Privacy and Policy</a></li>
-        <li><a href="#" class="py-2 d-block">Refund Policy</a></li>
-        <li><a href="#" class="py-2 d-block">Call Us</a></li>
+        <li><a href="#" class="py-2 d-block">Qna</a></li>
+        <li><a href="#" class="py-2 d-block">이용 약관</a></li>
+        <li><a href="#" class="py-2 d-block">개인정보취급방침</a></li>
     </ul>
 </div>
 </div>
 <div class="col-md pt-5">
    <div class="ftco-footer-widget pt-md-5 mb-4">
-      <h2 class="ftco-heading-2">Recent Courses</h2>
+      <h2 class="ftco-heading-2">커뮤니티</h2>
       <ul class="list-unstyled">
-        <li><a href="#" class="py-2 d-block">Computer Engineering</a></li>
-        <li><a href="#" class="py-2 d-block">Web Design</a></li>
-        <li><a href="#" class="py-2 d-block">Business Studies</a></li>
-        <li><a href="#" class="py-2 d-block">Civil Engineering</a></li>
-        <li><a href="#" class="py-2 d-block">Computer Technician</a></li>
-        <li><a href="#" class="py-2 d-block">Web Developer</a></li>
+        <li><a href="#" class="py-2 d-block">공지사항</a></li>
+        <li><a href="#" class="py-2 d-block">자유 게시판</a></li>
+        <li><a href="#" class="py-2 d-block">질문과 답변</a></li>
     </ul>
 </div>
 </div>
 <div class="col-md pt-5">
     <div class="ftco-footer-widget pt-md-5 mb-4">
-       <h2 class="ftco-heading-2">Have a Questions?</h2>
+       <h2 class="ftco-heading-2">JS Company</h2>
        <div class="block-23 mb-3">
          <ul>
-           <li><span class="icon fa fa-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-           <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-           <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">info@yourdomain.com</span></a></li>
+           <li><span class="icon fa fa-map-marker"></span><span class="text">서울 구로구 어딘가에 위치한 저택의 한공간</span></li>
+           <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">010 2940 8805</span></a></li>
+           <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">kjsj20@naver.com</span></a></li>
        </ul>
    </div>
 </div>
@@ -56,8 +50,7 @@
   <div class="col-md-12 text-center">
 
     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+      (주)JSpompany &copy;<script>document.write(new Date().getFullYear());</script> 대표자 : 김재성 | 사업자번호 : 000-00-00000
   </div>
 </div>
 </div>
@@ -81,7 +74,5 @@
 <script src="/resources/js/jquery.animateNumber.min.js"></script>
 <script src="/resources/js/bootstrap-datepicker.js"></script>
 <script src="/resources/js/scrollax.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="/resources/js/google-map.js"></script>
 <script src="/resources/js/main.js"></script>
 <script src="/resources/js/member.js"></script>

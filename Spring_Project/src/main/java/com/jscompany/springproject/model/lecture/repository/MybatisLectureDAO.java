@@ -41,5 +41,18 @@ public class MybatisLectureDAO implements LectureDAO{
 	public int delete(int lecture_id) throws Exception {		
 		return sqlSessionTemplate.delete("Lecture.delete",lecture_id);
 	}
+	
+	//탑카테고리 선택시 해당 카테고리에 있는 강의 전체 보여주기
+	public List selectByTopId(int topcategory_id) throws Exception {
+		return sqlSessionTemplate.selectList("Lecture.selectByTopId", topcategory_id);
+	}
+
+	public List selectSubList(int subcategory_id) throws Exception {
+		return sqlSessionTemplate.selectList("Lecture.selectSubList", subcategory_id);
+	}
+
+	public List selectByMemberId(int member_id) throws Exception {
+		return sqlSessionTemplate.selectList("Lecture.selectByMemberId", member_id);
+	}
 
 }

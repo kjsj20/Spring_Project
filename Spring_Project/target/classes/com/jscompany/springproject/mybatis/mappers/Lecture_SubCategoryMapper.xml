@@ -5,5 +5,5 @@
 	<select id="selectByTopId" resultType="Lecture_SubCategory">
 		select * from lecture_subcategory where lecture_topcategory_id = #{lecture_topcategory_id} 
 	</select>
-
+	
 </mapper>

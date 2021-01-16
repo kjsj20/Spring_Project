@@ -4,4 +4,8 @@
 	<insert id="insert" parameterType="Section_detail">
 		insert into section_detail(section_detail_id,section_id,section_detail_name, section_lectureurl) values(seq_section_detail.nextval,#{section_id}, #{section_detail_name}, #{section_lectureurl})
 	</insert>
+	
+	<select id="selectBySectionId" resultType="Section_detail" parameterType="int">
+		select * from section_detail where section_id = #{section_id} order by section_detail_id 
+	</select>
 </mapper>

@@ -7,4 +7,8 @@
 			select seq_section.currval as section_id from dual
 		</selectKey>
 	</insert>
+	
+	<select id="selectBylectureID" resultType="Section" parameterType="int">
+		select * from section where lecture_id = #{lecture_id} order by section_id
+	</select>
 </mapper> 

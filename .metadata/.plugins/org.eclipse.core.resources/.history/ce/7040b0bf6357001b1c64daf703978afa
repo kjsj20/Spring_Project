@@ -1,0 +1,14 @@
+$(function(){
+	$('#idEdit').click(function(){
+		alert('만세');
+	});	
+	$('#passEdit').click(function(){
+		alert('만세');
+	});	
+	$('#phoneEdit').click(function(){
+		alert('만세');
+	});	
+	$('#birthEdit').click(function(){
+		alert('만세');
+	});	
+});

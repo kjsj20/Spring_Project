@@ -12,11 +12,9 @@
 
    <div class="collapse navbar-collapse" id="ftco-nav">
        <ul class="navbar-nav ml-auto">
-         <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
-         <li class="nav-item"><a href="about.html" class="nav-link">LoadMap</a></li>
-         <li class="nav-item"><a href="course.html" class="nav-link">Course</a></li>
+         <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+         <li class="nav-item"><a href="/course/list?topcategory_id=1" class="nav-link">Course</a></li>
          <li class="nav-item"><a href="/board/notice" class="nav-link">Community</a></li>
-         <li class="nav-item"><a href="blog.html" class="nav-link">FAQ</a></li>
          <li class="nav-item">
          	<%if(session.getAttribute("member")==null){//세션에 담겨진 데이터가 없다면 %>
 	         <a href="/loginForm" class="nav-link">Login</a>
@@ -24,6 +22,10 @@
 	         <a href="/loginout" class="nav-link">Logout</a>
 	        <%} %>
          </li>
+         <%if(session.getAttribute("member")!=null){//세션에 담겨진 데이터가 없다면 %>
+         <li class="nav-item"><a href="/mycourselist?member_id=<%=member.getMember_id() %>" class="nav-link">DashBoard</a></li>
+         <li class="nav-item"><a href="/mypage?mypage=1" class="nav-link">MyPage</a></li>
+         <%} %>
          <%if(session.getAttribute("member")!=null){%>
         	 <%if(member.getAdmin_state() == 1) {%>
          		<li class="nav-item"><a href="/admin/list" class="nav-link">AdminPage</a></li>

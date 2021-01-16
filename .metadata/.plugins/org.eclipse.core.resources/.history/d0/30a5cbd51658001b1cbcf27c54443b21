@@ -1,0 +1,7 @@
+package com.jscompany.springproject.model.lecture.service;
+
+import java.util.Map;
+
+public interface MemberhavelectureService {
+	public int courseRegist(Map map) throws Exception; 
+}

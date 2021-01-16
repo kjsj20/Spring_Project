@@ -1,0 +1,5 @@
+package com.jscompany.springproject.model.lecture.repository;
+
+public interface MemberhavelectureDAO {
+	public int courseInsert(int member_id, int lecture_id) throws Exception; 
+}

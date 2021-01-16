@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=""/>
+		<item key="selection" value="sidebar_list"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="registOrder"/>
-			<item value="sectionList"/>
-			<item value="console"/>
-			<item value="classArr"/>
-			<item value="updateLecture"/>
-			<item value="addSection"/>
-			<item value="number"/>
-			<item value="lecTitle"/>
-			<item value="&quot;lecTitle&quot;"/>
-			<item value="섹션"/>
-			<item value="admin"/>
-			<item value="lecture_id"/>
-			<item value="console.log"/>
-			<item value="sidebar"/>
-			<item value="subRadio"/>
+			<item value="sidebar_list"/>
+			<item value="hr"/>
+			<item value="login"/>
+			<item value="system"/>
+			<item value="로그인"/>
+			<item value="f"/>
+			<item value="수강"/>
+			<item value="hidden"/>
+			<item value="section_detail75"/>
+			<item value="400"/>
+			<item value="getsub"/>
+			<item value="get"/>
+			<item value="d"/>
+			<item value="delete"/>
+			<item value="del"/>
 		</list>
 		<list key="replacehistory">
+			<item value="/resources/js/"/>
+			<item value="/resources/css/"/>
+			<item value="lecture"/>
 			<item value="/resources/css/board/"/>
 			<item value="/resources/board"/>
 			<item value="/resources/images/"/>
 			<item value="/resource/js"/>
-			<item value="/resources/css/"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

@@ -164,8 +164,6 @@ $(function() {
 	//섹션 & 수업 등록
 	function registSection(){
 		var formData = new FormData($("#sectionForm")[0]);
-		console.log(classArrList);
-		console.log(urlArrList)
 		for(i = 0; i < sectionArr.length; i++){
 			var count = 0;
 			formData.append("sectionList", sectionArr[i].value);
@@ -184,10 +182,11 @@ $(function() {
 			contentType:false,/*false일 경우 multipart/form-data*/
 			processData:false,
 			success:function(data){
-				console.log('축배를 올려라!!');
+				alert('섹션 추가 성공 !!!');
+				location.href = "/lecture/list";
 			},
 			error:function(){
-				console.log('실패');
+				alert('섹션 추가 실패..');
 			}
 		});
 	}

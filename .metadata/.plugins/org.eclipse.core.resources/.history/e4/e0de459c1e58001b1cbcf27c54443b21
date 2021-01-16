@@ -1,0 +1,14 @@
+package com.jscompany.springproject.model.lecture.service;
+
+import java.util.Map;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class MemberhavelectureServiceImpl implements MemberhavelectureService{
+
+	public int courseRegist(Map mapId) throws Exception {
+		return 0;
+	}
+
+}

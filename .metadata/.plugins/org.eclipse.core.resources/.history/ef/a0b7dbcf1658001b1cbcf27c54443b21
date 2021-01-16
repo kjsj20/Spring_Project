@@ -1,0 +1,12 @@
+package com.jscompany.springproject.model.lecture.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class MemberhavelectureServiceImpl implements MemberhavelectureService{
+
+	public int courseRegist(int member_id, int lecture_id) throws Exception {
+		return 0;
+	}
+
+}

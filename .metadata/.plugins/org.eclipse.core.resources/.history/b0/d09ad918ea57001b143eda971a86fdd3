@@ -1,0 +1,26 @@
+@charset "UTF-8";
+.active {
+	color : #0080FF;
+	font-weight : bold;
+}
+
+.sectionCategory{
+	width:100%;
+}
+
+.label
+{
+	width:100%;
+  	margin: 10px 0 0 0;
+  	padding: 13px;
+  	color:black;
+  	border : 1px solid #D8D8D8;
+}
+.elements
+{
+	width:100%;
+  	border: 1px solid #ccccff;
+  	border : 1px solid #D8D8D8; 
+  	color:black;
+  	padding: 13px;
+}

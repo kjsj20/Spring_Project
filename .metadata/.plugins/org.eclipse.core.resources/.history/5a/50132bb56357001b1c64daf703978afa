@@ -1,0 +1,17 @@
+$(function(){
+	$('#idEdit').click(function(){
+		alert('만세');
+	});	
+	$('#idEdit').click(function(){
+		alert('만세');
+	});	
+	$('#idEdit').click(function(){
+		alert('만세');
+	});	
+	$('#idEdit').click(function(){
+		alert('만세');
+	});	
+	<input type="text" id="lname" name="password" placeholder="비밀번호" value=""><input id="passEdit" type="button" value="수정">
+								<input type="text" id="lname" name="phone" placeholder="휴대전화" value="<%=member.getPhone()%>"><input id="phoneEdit" type="button" value="수정">
+								<input type="text" id="lname" name="birth_date" placeholder="생년월일" value="<%=member.getBirth_date()%>"><input id="birthEdit" type="button" value="수정">
+});

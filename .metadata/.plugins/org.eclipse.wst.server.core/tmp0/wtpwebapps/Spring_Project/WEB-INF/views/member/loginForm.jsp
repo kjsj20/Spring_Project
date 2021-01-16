@@ -33,8 +33,11 @@
 						class="show">SHOW</span>
 				</div>
 				<p id="idPassChk" style="color: #FF6600; margin: 0;"></p>
+				<div class="pass" style="float:left;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/idSearchForm" >이메일 찾기 /&nbsp;</a>
+				</div>
 				<div class="pass">
-					<a href="#">비밀번호를 잊으셨나요?</a>
+					<a href="/passSearchForm"> 비밀번호 찾기</a>
 				</div>
 				<div class="field">
 					<input class="login" type="button" value="로그인">

@@ -1,0 +1,5 @@
+package com.jscompany.springproject.model.lecture.service;
+
+public interface MemberhavelectureService {
+	public int courseRegist(int member_id, int lecture_id) throws Exception; 
+}
