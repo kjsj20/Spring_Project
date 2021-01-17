@@ -1,6 +1,0 @@
-@charset "UTF-8";
-.active {
-	color : #0080FF;
-	font-weight : bold;
-}
-

@@ -1,6 +1,0 @@
-package com.jscompany.springproject.model.lecture.repository;
-
-public class MybatisSection_DetailDAO implements Section_DetailDAO{
-	public class MybatisSection_DetailDAO implements Section_DetailDAO{
-
-}

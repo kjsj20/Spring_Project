@@ -1,5 +1,0 @@
-package com.jscompany.springproject.exception;
-
-public class LectureRegistException {
-
-}

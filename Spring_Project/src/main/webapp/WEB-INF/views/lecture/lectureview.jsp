@@ -26,14 +26,20 @@
   		<a id ="1" href="/" class="active"><h3><i class="fa fa-fw fa-home"></i>Home</h3></a>
   		<%for(int i=0; i < sectionList.size(); i++) {%>
   		<%Section section = sectionList.get(i); %>
-  			<div class ="section"><a id ="2" href="#"><%=section.getSection_name() %></a></div>
+  			<div class ="section"><%=section.getSection_name() %></div>
   			<%List<Section_detail> section_DetailList = sectionDetailListList.get(i); %>
   			<%for(int j = 0; j < section_DetailList.size(); j++){ %>
   			<%Section_detail section_Detail = section_DetailList.get(j); %>
-  			<div class ="section_detail"><a id ="2" href="#"><%=section_Detail.getSection_detail_name()%></a></div>  				
+  			<div class ="section_detail"><a id ="2" href=""><%=section_Detail.getSection_detail_name()%></a></div>  				
   			<%} %>
   		<%} %>
   		
 	</div>
+  	<div class="video">
+    	<div class="video-container">
+      		<iframe id="iframeView" width="100%" height="100%" src="https://www.youtube.com/embed/eitDnP0_83k?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    	</div>
+	</div>
+  		
 </body>
 </html>

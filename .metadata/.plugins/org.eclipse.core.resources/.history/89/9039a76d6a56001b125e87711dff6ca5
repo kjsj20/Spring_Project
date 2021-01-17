@@ -1,8 +1,0 @@
-package com.jscompany.springproject.model.lecture.service;
-
-import org.springframework.stereotype.Service;
-
-@Service
-public interface SectionService {
-	public int regist(Section section) throws Exception;
-}

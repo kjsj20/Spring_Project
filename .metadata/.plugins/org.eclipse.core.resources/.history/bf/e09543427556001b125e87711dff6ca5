@@ -1,8 +1,0 @@
-package com.jscompany.springproject.model.lecture.service;
-
-import com.jscompany.springproject.model.domain.lecture.Section;
-import com.jscompany.springproject.model.domain.lecture.Section_detail;
-
-public interface SectionService {
-	public void regist(Section section, Section_detail section_detail, classList, urlList, countList , sectionList) throws Exception;
-}

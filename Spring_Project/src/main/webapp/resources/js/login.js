@@ -44,7 +44,8 @@ function login(){
 				$('#idPassChk').text('');
 				$('#idPassChk').html("<font color='#FF6600'>이메일 또는 비밀번호가 <br>일치 하지 않습니다.<br> 다시 한번 확인해주세요 </font>");	
 			} else {
-				history.back();
+				alert('이거안되 ?');
+				location.href='/';
 			}
 		},
 		error: function(){

@@ -1,7 +1,0 @@
-package com.jscompany.springproject.aop;
-
-import org.springframework.beans.factory.annotation.Autowired;
-
-public class LectureDataAspect {
-	@Autowired
-}

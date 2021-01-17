@@ -1,5 +1,0 @@
-package com.jscompany.springproject.model.lecture.service;
-
-public interface MemberhavelectureService {
-
-}

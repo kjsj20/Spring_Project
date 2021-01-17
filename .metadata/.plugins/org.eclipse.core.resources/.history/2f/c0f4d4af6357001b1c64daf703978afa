@@ -1,5 +1,0 @@
-$(function(){
-	$('#idEdit').click(function(){
-		alert('만세');
-	});	
-});

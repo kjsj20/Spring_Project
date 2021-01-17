@@ -1,8 +1,0 @@
-package com.jscompany.springproject.model.lecture.repository;
-
-import org.springframework.stereotype.Repository;
-
-@Repository
-public class MybatisMemberhavelectureDAO {
-
-}
