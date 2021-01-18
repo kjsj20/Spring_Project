@@ -40,10 +40,10 @@
 				<div class="col-md-9 ftco-animate pb-5 text-center">
 					<p class="breadcrumbs">
 						<span class="mr-2"><a href="index.html">Home <i
-								class="fa fa-chevron-right"></i></a></span> <span>Course Lists <i
+								class="fa fa-chevron-right"></i></a></span> <span>My page <i
 							class="fa fa-chevron-right"></i></span>
 					</p>
-					<h1 class="mb-0 bread">Course Lists</h1>
+					<h1 class="mb-0 bread">My Page</h1>
 				</div>
 			</div>
 		</div>
@@ -56,7 +56,6 @@
 
 					<div class="sidebar-box bg-white p-4 ftco-animate">
 						<label id="mypage1" class="mypage" style="cursor: pointer;"> 내 정보 </label><br> 
-						<label id="mypage2" class="mypage" style="cursor: pointer;">내 강의 </label><br>
 					</div>
 				</div>
 				<div class="col-lg-9">

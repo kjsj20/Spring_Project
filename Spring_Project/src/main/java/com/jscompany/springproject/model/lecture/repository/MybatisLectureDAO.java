@@ -55,4 +55,8 @@ public class MybatisLectureDAO implements LectureDAO{
 		return sqlSessionTemplate.selectList("Lecture.selectByMemberId", member_id);
 	}
 
+	public List selectMainList() throws Exception {
+		return sqlSessionTemplate.selectList("Lecture.selectMainList");
+	}
+
 }

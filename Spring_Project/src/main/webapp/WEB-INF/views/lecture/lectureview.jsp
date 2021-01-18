@@ -12,6 +12,7 @@
     <title>CoCo!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/resources/css/lecture/lectureView.css">
     <script src="/resources/js/lecture/course.js"></script>
@@ -30,14 +31,14 @@
   			<%List<Section_detail> section_DetailList = sectionDetailListList.get(i); %>
   			<%for(int j = 0; j < section_DetailList.size(); j++){ %>
   			<%Section_detail section_Detail = section_DetailList.get(j); %>
-  			<div class ="section_detail"><a id ="2" href=""><%=section_Detail.getSection_detail_name()%></a></div>  				
+  			<div class ="section_detail"><a style="cursor:pointer;" id ="<%=section_Detail.getSection_lectureurl()%>" class ="srcChange"><%=section_Detail.getSection_detail_name()%></a></div>  				
   			<%} %>
   		<%} %>
   		
 	</div>
   	<div class="video">
     	<div class="video-container">
-      		<iframe id="iframeView" width="100%" height="100%" src="https://www.youtube.com/embed/eitDnP0_83k?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      		<iframe id="iframeView" width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     	</div>
 	</div>
   		

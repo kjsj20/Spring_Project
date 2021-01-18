@@ -74,4 +74,9 @@ public class LectureServiceImpl implements LectureService{
 		return lectureDAO.selectByMemberId(member_id);
 	}
 
+	@Override
+	public List selectMainList() throws Exception {
+		return lectureDAO.selectMainList();
+	}
+
 }

@@ -68,7 +68,7 @@
 			<label for="lecture_summary_content"><b>강의 요약</b></label>
 		   	<textarea id="lecture_summary_content" name="lecture_summary_content" placeholder="간단하게 강의 요약을 입력 해주세요~" style="height:60px"></textarea>
 			<!-- 강의 상세 내용 작성란-->
-		    <label for="lecture_detail_content"><b>강의 상세 내용</b></label>
+		    <label for="lecture_detail_content"><b>&nbsp;&nbsp;&nbsp;강의 상세 내용</b></label>
 		    <textarea id="lecture_detail_content" name="lecture_detail_content" placeholder="강의 상세내용을 입력 해주세요~" ></textarea>
 		    
 		    <hr>

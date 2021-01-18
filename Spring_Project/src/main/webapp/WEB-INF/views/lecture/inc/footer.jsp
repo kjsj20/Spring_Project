@@ -17,7 +17,7 @@
     <div class="ftco-footer-widget pt-md-5 mb-4 ml-md-5">
       <h2 class="ftco-heading-2">고객센터</h2>
       <ul class="list-unstyled">
-        <li><a href="#" class="py-2 d-block">Qna</a></li>
+        <li><a href="#" class="py-2 d-block">자주묻는 질문</a></li>
         <li><a href="#" class="py-2 d-block">이용 약관</a></li>
         <li><a href="#" class="py-2 d-block">개인정보취급방침</a></li>
     </ul>
@@ -28,8 +28,7 @@
       <h2 class="ftco-heading-2">커뮤니티</h2>
       <ul class="list-unstyled">
         <li><a href="#" class="py-2 d-block">공지사항</a></li>
-        <li><a href="#" class="py-2 d-block">자유 게시판</a></li>
-        <li><a href="#" class="py-2 d-block">질문과 답변</a></li>
+        <li><a href="#" class="py-2 d-block">Qna</a></li>
     </ul>
 </div>
 </div>

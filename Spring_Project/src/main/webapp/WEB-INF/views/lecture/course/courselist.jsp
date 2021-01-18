@@ -16,7 +16,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>CoCo!</title>
+    <title>저놈을 잡아오라!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%@ include file="../inc/header.jsp"%>
@@ -25,7 +25,6 @@
 </head>
 <body>
 <%@ include file="../inc/nav.jsp" %>
-<!-- END nav -->
 	<input id="topcategory_id" type="hidden" value="<%=topcategory_id %>"/>
 	<input id="subcategory_id" type="hidden" value="<%=subcategory_id %>"/>
 	<section class="hero-wrap hero-wrap-2" style="background-image: url('/resources/images/work-5.jpg');">

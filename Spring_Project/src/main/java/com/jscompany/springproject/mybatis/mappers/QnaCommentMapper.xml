@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Qna_Comment">
+	<insert id="insert">
+		insert into qna_comment(qna_comment_id, member_id, qna_id, cmmt_content) values(seq_qna_comment.nextval, #{member_id}, #{qna_id}, #{cmmt_content})
+	</insert>
+	<select id="selectCmmt" resultType="Qna_Comment" parameterType="int">
+		select qna_comment_id, qc.member_id AS member_id, qna_id, cmmt_content, regdate, user_name 
+		from qna_comment qc, MEMBER m 
+		where qna_id = #{qna_id} 
+		AND qc.member_id = m.MEMBER_ID 
+		order by qna_comment_id desc
+	</select>
+	
+	<delete id="delete" parameterType="int">
+  		delete from qna_comment where qna_comment_id = #{qna_comment_id}
+	</delete>
+</mapper>

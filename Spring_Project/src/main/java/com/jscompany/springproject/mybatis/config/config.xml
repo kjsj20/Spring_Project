@@ -15,6 +15,9 @@
 		<typeAlias type="com.jscompany.springproject.model.domain.lecture.Section" alias="Section" />
 		<typeAlias type="com.jscompany.springproject.model.domain.lecture.Section_detail" alias="Section_detail" />
 		<typeAlias type="com.jscompany.springproject.model.domain.lecture.Memberhavelecture" alias="Memberhavelecture" />
+		<typeAlias type="com.jscompany.springproject.model.domain.board.Notice" alias="Notice" />
+		<typeAlias type="com.jscompany.springproject.model.domain.board.Qna" alias="Qna" />
+		<typeAlias type="com.jscompany.springproject.model.domain.board.Qna_Comment" alias="Qna_Comment" />
 	</typeAliases>
 	<mappers>
 		<mapper	resource="com/jscompany/springproject/mybatis/mappers/MemberMapper.xml" />
@@ -25,5 +28,8 @@
 		<mapper	resource="com/jscompany/springproject/mybatis/mappers/SectionMapper.xml" />
 		<mapper	resource="com/jscompany/springproject/mybatis/mappers/Section_DetailMapper.xml" />
 		<mapper	resource="com/jscompany/springproject/mybatis/mappers/MemberhavelectureMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mappers/NoticeMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mappers/QnaMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mappers/QnaCommentMapper.xml" />
 	</mappers>
 </configuration>

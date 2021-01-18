@@ -59,7 +59,7 @@
 			</td>
 			<td><%=lecture.getRegistDate() %></td>
 			<td>
-				<%if(lecture.getLecture_use_state() == 1){%> 승인완료 <%} else if(lecture.getLecture_use_state() == 2) {%> 승인반려 <%} else {%> 승인대기 <%} %>
+				<%if(lecture.getLecture_use_state() == 1){%> 승인완료 <%} else if(lecture.getLecture_use_state() == 2) {%> 승인반려 <%} else {%> 승인완료 <%} %>
 			</td>
 			<td>
 				<input name="addSection" class="<%=lecture.getLecture_id() %>" type="button" value="섹션추가" style="margin-left:2px;"/>

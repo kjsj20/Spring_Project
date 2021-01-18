@@ -30,6 +30,12 @@ $(function() {
 		alert('로그인이 필요한 서비스 입니다.');
 		location.href = '/loginForm';
 	});
+	
+	//강의 변경할때
+	$('.srcChange').click(function(){
+		console.log(this.id);
+		$('#iframeView').attr('src', this.id);
+	})
 });
 
 //상위 카테고리를 선택하면 하위 카테고리를 db에서 가져옴.
@@ -135,6 +141,5 @@ function payment(price, user_name, e_mail, phone ) {
 			var msg = '결제에 실패하였습니다.';
 			msg += '에러내용 : ' + rsp.error_msg;
 		}
-		alert(msg);
 	});
 }
