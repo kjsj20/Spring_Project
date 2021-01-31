@@ -15,7 +15,7 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<jee:jndi-lookup 
 		id="dataSource"
-		jndi-name="jdbc/myoracle"
+		jndi-name="jdbc/myMariaDB"
 		resource-ref="true"/>
 	
 	<bean id="dataSourceTransactionManager" 

@@ -49,7 +49,7 @@ public class MailSendService {
             sendMail.setSubject("회원가입 이메일 인증");
             sendMail.setText(new StringBuffer().append("<h1>[이메일 인증]</h1>")
             .append("<p>아래 링크를 클릭하시면 이메일 인증이 완료됩니다.</p>")
-            .append("<a href='http://localhost:8888/member/signUpConfirm?e_mail=")
+            .append("<a href='http://3.128.152.6:8080//member/signUpConfirm?e_mail=")
             .append(email)
             .append("&authKey=")
             .append(authKey)

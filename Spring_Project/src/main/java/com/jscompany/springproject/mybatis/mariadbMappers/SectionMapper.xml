@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Section">
+	<insert id="insert" parameterType="Section">
+		insert into section(lecture_id, section_name) values(#{lecture_id}, #{section_name})
+		<selectKey order="AFTER" keyProperty="section_id" resultType="int">
+			select last_insert_id() as section_id from dual
+		</selectKey>
+	</insert>
+	
+	<select id="selectBylectureID" resultType="Section" parameterType="int">
+		select * from section where lecture_id = #{lecture_id} order by section_id
+	</select>
+</mapper> 

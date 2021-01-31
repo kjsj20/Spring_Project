@@ -10,11 +10,12 @@ public class Formatter {
 	public static String getCurrency(long number) {
 		String currency = Currency.getInstance(Locale.KOREA).getSymbol();
 		DecimalFormat df = new DecimalFormat("###,###.###");
-		String result = currency + df.format(number);
+		String result = currency + "  " + df.format(number) + "원";
 		return result;
 	}
 	
-	public static void main(String[] args) {
-		System.out.println(getCurrency(2000000000));
-	} 
+//	/*
+//	 * public static void main(String[] args) {
+//	 * System.out.println(getCurrency(2000000000)); }
+//	 */
 }

@@ -20,16 +20,16 @@
 		<typeAlias type="com.jscompany.springproject.model.domain.board.Qna_Comment" alias="Qna_Comment" />
 	</typeAliases>
 	<mappers>
-		<mapper	resource="com/jscompany/springproject/mybatis/mappers/MemberMapper.xml" />
-		<mapper	resource="com/jscompany/springproject/mybatis/mappers/Lecture_TopCategoryMapper.xml" />
-		<mapper	resource="com/jscompany/springproject/mybatis/mappers/Lecture_SubCategoryMapper.xml" />
-		<mapper	resource="com/jscompany/springproject/mybatis/mappers/LectureMapper.xml" />
-		<mapper	resource="com/jscompany/springproject/mybatis/mappers/DifficultyMapper.xml" />
-		<mapper	resource="com/jscompany/springproject/mybatis/mappers/SectionMapper.xml" />
-		<mapper	resource="com/jscompany/springproject/mybatis/mappers/Section_DetailMapper.xml" />
-		<mapper	resource="com/jscompany/springproject/mybatis/mappers/MemberhavelectureMapper.xml" />
-		<mapper	resource="com/jscompany/springproject/mybatis/mappers/NoticeMapper.xml" />
-		<mapper	resource="com/jscompany/springproject/mybatis/mappers/QnaMapper.xml" />
-		<mapper	resource="com/jscompany/springproject/mybatis/mappers/QnaCommentMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mariadbMappers/MemberMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mariadbMappers/Lecture_TopCategoryMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mariadbMappers/Lecture_SubCategoryMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mariadbMappers/LectureMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mariadbMappers/DifficultyMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mariadbMappers/SectionMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mariadbMappers/Section_DetailMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mariadbMappers/MemberhavelectureMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mariadbMappers/NoticeMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mariadbMappers/QnaMapper.xml" />
+		<mapper	resource="com/jscompany/springproject/mybatis/mariadbMappers/QnaCommentMapper.xml" />
 	</mappers>
 </configuration>

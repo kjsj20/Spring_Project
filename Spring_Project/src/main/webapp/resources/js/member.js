@@ -1,40 +1,33 @@
 $(function() {
-	$('#signUpUser').click(function() {
-		if ($('#e_mail').val() == '') {
-			alert('이메일을 입력해 주세요..');
-		} else {
-			if ($('#phone').val() == '') {
-				alert('휴대전화 번호를 입력해 주세요..');
-			} else {
-				if ($('#birth_date').val() == '') {
-					alert('생년월일을 입력해 주세요..');
-				} else {
-					if ($('#user_name').val() == '') {
-						alert('이름을 입력해주세요..')
-					} else {
-						if ($('#password').val() == '') {
-							alert('비밀번호를 입력해주세요..');
-						} else {
-							if ($('#passwordConfirm').val() == '') {
-								alert('비밀번호 확인을 입력해주세요..');
-							} else {
-								if ($('#password').val() != $('#passwordConfirm').val()) {
-									$('#pwCheck').text('');
-									$('#pwCheck').html("비밀번호 확인이 일치하지 않습니다.");
-								} else {
-									$('#pwCheck').text('');
-									$('#signUpComplete').text('');
-									$('#signUpComplete').html("<font color='#70AD47'>잠시만 기다려 주세요. <br>처리 중입니다..</font>");
-									$('#signUpUser').attr('disabled', true);
-									signUp();
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	});
+   $('#signUpUser').click(function() {
+      var arrNullCheckList = [
+            {id:"e_mail", msg:"이메일을 입력해 주세요.."}
+            , {id:"phone", msg:"휴대전화 번호를 입력해 주세요.."}
+            , {id:"birth_date", msg:"생년월일을 입력해 주세요.."}
+            , {id:"user_name", msg:"이름을 입력해주세요.."}
+            , {id:"password", msg:"비밀번호 확인을 입력해주세요.."}
+      ];
+
+      for (var iCnt = 0; iCnt = arrNulCheckList.length; iCnt++) {
+          if ($('#' + arrNullCheckList[iCnt].id).val() == '') {
+            alert(arrNullCheckList[iCnt].msg);
+            return;
+          } else {
+             //Nothing To Do
+          }
+      }
+
+        if ($('#password').val() != $('#passwordConfirm').val()) {
+         $('#pwCheck').text('');
+         $('#pwCheck').html("비밀번호 확인이 일치하지 않습니다.");
+      } else {
+         $('#pwCheck').text('');
+         $('#signUpComplete').text('');
+         $('#signUpComplete').html("<font color='#70AD47'>잠시만 기다려 주세요. <br>처리 중입니다..</font>");
+         $('#signUpUser').attr('disabled', true);
+         signUp();
+      }
+   });
 });
 
 function signUp() {
