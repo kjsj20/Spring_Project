@@ -18,7 +18,7 @@
 ‣ Dbeaver
 
 ### 사용언어/DBMS
-디자인/퍼블리싱 : JSP/CSS3/JAVASCRIPT/JQUERY/BOOTSTRAP
+디자인/퍼블리싱 : JSP/CSS3/JAVASCRIPT/JQUERY/BOOTSTRAP<br/>
 백엔드 : JAVA EE/SPRING FRAMEWORK
 DBMS : ORACLE/MariaDB (Mybatis 라이브러리 사용하여 Java와 매핑)
 WAS : tomcat8.5 
